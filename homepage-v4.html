@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney · Communications Strategist</title>
+<meta name="description" content="I help founder-led companies get sales, marketing, PR, social, and HR saying the same thing. One voice. One story. Said clearly.">
+<link rel="icon" href="favicon.png">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS — Visual Style Guide v1.2
+═══════════════════════════════════════════════ */
+:root{
+  /* ---- Section 4 - Color ------------------------------------ */
+  --plum-deep:#2E0F35;
+  --plum-surface:#3A1543;
+  --purple:#5C1064;
+  --plum-mid:#7A2B84;
+  --plum-black:#1B0A20;
+  --amethyst:#A95CB4;
+  --platinum:#C9CDD2;
+  --silver-hi:#F2F4F6;
+  --silver-mid:#9AA1A8;
+  --paper:#F5F2F5;
+  --text-light:#E9E1EA;
+  --text-dark:#4C3A52;
+
+  /* Machined Silver ramp. The 48% band is the highlight break. */
+  --metal:linear-gradient(176deg,#FBFCFD 0%,#D8DCE0 26%,#8C939A 48%,#F0F3F5 64%,#A6ADB4 82%,#E4E8EB 100%);
+  --btn-primary-fill:linear-gradient(180deg,#8B3395,#5C1064);
+  --btn-metal-fill:linear-gradient(180deg,#F4F6F7,#C4C9CE 52%,#9AA1A8);
+  --shadow-primary:0 1px 0 rgba(255,255,255,.24) inset,0 10px 26px rgba(0,0,0,.34);
+  --shadow-metal:0 1px 0 rgba(255,255,255,.90) inset,0 8px 22px rgba(0,0,0,.30);
+
+  /* Hairlines. Platinum on dark grounds, Deep Plum derived for light grounds. */
+  --line:rgba(201,205,210,.16);
+  --line-strong:rgba(201,205,210,.32);
+  --line-dark:rgba(46,15,53,.12);
+  --line-dark-strong:rgba(46,15,53,.20);
+
+  /* ---- Section 5 - Typography ------------------------------- */
+  --sans:'Switzer','Tahoma','Segoe UI',Verdana,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+
+  /* ---- Section 8 - Layout And Space ------------------------- */
+  --container:1180px;
+  --container-wide:1400px;
+  --nav-h:70px;
+
+  /* ---- Legacy aliases, repointed at guide values so the shared
+     nav/footer and any not-yet-migrated rule stays correct. ---- */
+  --display:var(--sans);
+  --body:var(--sans);
+  --purple-deep:var(--plum-deep);
+  --ink:var(--plum-deep);
+  --purple-mid:var(--plum-mid);
+  --orchid:var(--amethyst);
+  --slate-plum:var(--text-dark);
+  --gray:var(--text-dark);
+  --lavender:var(--line-dark-strong);
+  --mist:var(--paper);
+  --white:#fff;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:17px;line-height:1.68;color:var(--text-dark);background:#fff;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+.wrap-wide{max-width:var(--container-wide);margin:0 auto;padding:0 20px}
+section{padding:90px 0}
+.mist{background:var(--mist)}
+
+/* -- Shared type utilities (Guide section 5) -- */
+.label{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.24em;line-height:1.4;text-transform:uppercase;color:var(--text-dark)}
+.on-dark .label{color:var(--silver-mid)}
+.section-index{font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.24em;color:var(--text-dark);display:block;margin-bottom:14px}
+.on-dark .section-index{color:var(--silver-mid)}
+.metal-text{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hairline{height:1px;border:0;background:linear-gradient(90deg,transparent,var(--line-dark-strong) 12%,var(--line-dark-strong) 88%,transparent)}
+.on-dark .hairline{background:linear-gradient(90deg,transparent,var(--line-strong) 12%,var(--line-strong) 88%,transparent)}
+
+
+/* ── Section header pattern ────────────────── */
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-head h2{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:.014em;text-transform:uppercase;color:var(--plum-deep);line-height:1.08}
+.sec-head h2 em{font-style:normal;color:var(--purple)}
+.sec-head .rule{width:40px;height:2px;background:var(--purple);margin:18px auto 0}
+.sec-head p{margin-top:22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-dark)}
+.on-dark .sec-head h2{color:#fff}
+.on-dark .sec-head h2 em{color:var(--platinum)}
+.on-dark .sec-head .rule{background:#fff}
+.on-dark .sec-head p{color:var(--silver-mid)}
+
+/* ── Buttons ───────────────────────────────── */
+.btn{display:inline-block;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:0;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-primary:hover{background:var(--purple-mid)}
+.btn-ghost{background:transparent;color:var(--slate-plum);border-color:var(--lavender)}
+.btn-ghost:hover{color:var(--purple);border-color:var(--purple)}
+.btn-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-light:hover{background:#fff;color:var(--purple)}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--platinum)}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* ═══════════════════════════════════════════════
+   HERO — sized to sit above the fold
+═══════════════════════════════════════════════ */
+.hero{position:relative;min-height:70vh;display:flex;align-items:center;padding-top:var(--nav-h);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:url('hero-speaking-1.jpg') center 40%/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,
+    rgba(92,16,100,.97)  0%,
+    rgba(92,16,100,.94) 38%,
+    rgba(92,16,100,.76) 58%,
+    rgba(46,15,53,.46)  82%,
+    rgba(46,15,53,.16) 100%);}
+
+.hero-inner{position:relative;z-index:2;width:100%;max-width:var(--container);margin:0 auto;
+            padding:22px 20px;display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center}
+
+.hero-eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;
+              color:var(--silver-mid);margin-bottom:20px}
+.hero h1{font-family:var(--sans);font-weight:700;font-size:clamp(34px,4.6vw,56px);line-height:1.06;
+         letter-spacing:-.028em;text-transform:none;color:#fff}
+.hero h1 em{font-style:normal;color:var(--orchid)}
+.hero-paren{display:block;margin-top:16px;font-family:var(--sans);font-style:italic;font-weight:400;
+            font-size:19px;letter-spacing:0;text-transform:none;color:rgba(233,225,234,.62);line-height:1.5}
+.hero-body{margin-top:20px;font-size:19px;line-height:1.62;color:rgba(233,225,234,.78);max-width:450px}
+
+/* Opt-in card */
+.optin{background:#fff;border-radius:0;padding:30px 28px 26px;box-shadow:0 24px 60px rgba(51,11,51,.34)}
+.optin .label{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;
+              color:var(--purple);margin-bottom:10px}
+.optin h2{font-family:var(--sans);font-weight:600;font-size:22px;line-height:1.24;letter-spacing:-.012em;color:var(--plum-deep);margin-bottom:7px}
+.optin .sub{font-size:15.5px;line-height:1.6;color:var(--text-dark);margin-bottom:18px}
+.optin form{display:flex;flex-direction:column;gap:10px}
+.optin input{border:1px solid var(--lavender);border-radius:0;padding:13px 15px;font-family:var(--sans);
+             font-size:15.5px;color:var(--plum-deep);outline:none;transition:border-color .2s;background:#fff}
+.optin input::placeholder{color:var(--text-dark);opacity:.55}
+.optin input:focus{border-color:var(--purple)}
+.optin button{width:100%;margin-top:2px;padding:15px 24px;font-size:12.5px}
+.optin .note{margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dark);text-align:center}
+
+/* ═══════════════════════════════════════════════
+   FEATURE STRIP
+═══════════════════════════════════════════════ */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.feat{text-align:center}
+.feat .circle{width:90px;height:90px;border:1px solid var(--lavender);border-radius:50%;
+              display:flex;align-items:center;justify-content:center;margin:0 auto}
+.feat svg{width:34px;height:34px;stroke:var(--purple);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.feat h3{margin-top:25px;font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:-.015em;
+         text-transform:none;color:var(--plum-deep)}
+.feat .divider{width:30px;height:1px;background:var(--lavender);margin:15px auto}
+.feat p{font-size:15.5px;line-height:1.68}
+
+/* ═══════════════════════════════════════════════
+   PULL QUOTE
+═══════════════════════════════════════════════ */
+.pullquote{text-align:center;padding:50px 0}
+.pullquote blockquote{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.4vw,44px);line-height:1.12;
+                      letter-spacing:-.028em;color:var(--plum-deep);max-width:900px;margin:0 auto}
+.pullquote blockquote em{font-style:normal;color:var(--purple)}
+.pullquote .rule{width:40px;height:2px;background:var(--purple);margin:34px auto 0}
+.pullquote cite{display:block;margin-top:26px;font-family:var(--mono);font-style:normal;font-size:11.5px;
+                font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--text-dark)}
+
+/* ═══════════════════════════════════════════════
+   PROBLEM + STATS
+═══════════════════════════════════════════════ */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+.copy p{font-size:17px;line-height:1.68;margin-bottom:18px}
+.copy p strong{color:var(--ink);font-weight:600}
+.stat-stack{display:flex;flex-direction:column;gap:16px}
+.stat{background:var(--mist);border-left:3px solid var(--purple);border-radius:0;padding:22px 24px;
+      display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.stat .num{font-family:var(--sans);font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-.02em;color:var(--purple);line-height:1;min-width:96px}
+.stat p{font-size:15.5px;line-height:1.62}
+
+/* ═══════════════════════════════════════════════
+   PHOTO BAND
+═══════════════════════════════════════════════ */
+.band{position:relative;height:420px;overflow:hidden;display:flex;align-items:center}
+.band-bg{position:absolute;inset:0;background:url('band-speaking-2.jpg') center 25%/cover no-repeat}
+.band-overlay{position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(46,15,53,.94) 0%,rgba(46,15,53,.78) 48%,rgba(92,16,100,.42) 100%)}
+.band .wrap{position:relative;z-index:2}
+.band p.q{font-family:var(--sans);font-weight:700;font-size:clamp(26px,3.2vw,40px);line-height:1.12;
+          letter-spacing:-.028em;color:#fff;max-width:620px}
+.band p.q em{font-style:normal;color:var(--platinum)}
+.band .attr{margin-top:18px;font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.24em;
+            text-transform:uppercase;color:var(--silver-mid)}
+
+/* ═══════════════════════════════════════════════
+   THREE-UP CARDS
+═══════════════════════════════════════════════ */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:#fff;border:1px solid var(--lavender);border-radius:0;padding:36px 30px 32px;
+      display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.card .num{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.24em;color:var(--purple);margin-bottom:16px}
+.card h3{font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:-.015em;text-transform:none;
+         color:var(--plum-deep);margin-bottom:8px}
+.card .cdivider{width:30px;height:1px;background:var(--lavender);margin:14px 0}
+.card p{font-size:15.5px;line-height:1.68;flex:1;margin-bottom:24px}
+.card .clink{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0;text-transform:none;
+             color:var(--purple);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
+.card .clink svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2}
+.card .clink:hover{gap:13px}
+
+/* ═══════════════════════════════════════════════
+   BOOK
+═══════════════════════════════════════════════ */
+.book{background:var(--purple-deep)}
+.book-grid{display:grid;grid-template-columns:300px 1fr;gap:76px;align-items:center}
+.book-grid img{width:100%;max-width:300px;filter:drop-shadow(-14px 18px 40px rgba(0,0,0,.6))}
+.book-right h2{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:.014em;text-transform:uppercase;
+               color:#fff;line-height:1.08}
+.book-right .rule{width:40px;height:2px;background:#fff;margin:18px 0 26px}
+.book-right p{font-size:17px;line-height:1.68;color:rgba(233,225,234,.82);margin-bottom:16px}
+.book-right p em{font-style:italic;color:#fff}
+.virtues{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 34px}
+.virtue{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;
+        padding:8px 15px;border:1px solid var(--line-strong);color:var(--platinum);border-radius:0}
+
+/* ═══════════════════════════════════════════════
+   TESTIMONIALS — two across, wide container
+═══════════════════════════════════════════════ */
+.t-hint{text-align:center;font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.24em;
+        text-transform:uppercase;color:var(--text-dark);margin-bottom:40px}
+.t-hint span{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--lavender);padding:11px 20px}
+.t-hint svg{width:15px;height:15px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.t-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.t-item{display:block;position:relative;border:1px solid var(--lavender);background:#fff;padding:0;cursor:zoom-in;
+        transition:border-color .25s,transform .25s,box-shadow .25s;overflow:hidden}
+.t-item:hover{border-color:var(--purple);transform:translateY(-3px);box-shadow:0 14px 34px rgba(51,11,51,.10)}
+.t-item img{width:100%;height:auto}
+.t-item .zoom{position:absolute;top:12px;right:12px;width:34px;height:34px;background:var(--purple);
+              display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
+.t-item:hover .zoom{opacity:1}
+.t-item .zoom svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.t-solo{grid-column:1 / -1;max-width:calc(50% - 13px);margin:0 auto}
+.t-note{text-align:center;margin-top:36px;font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-dark)}
+
+/* ── Lightbox ─────────────────────────────── */
+.lb{position:fixed;inset:0;z-index:900;display:none;align-items:center;justify-content:center;
+    background:rgba(51,11,51,.93);padding:70px 24px 24px}
+.lb.open{display:flex}
+.lb-img{max-width:min(92vw,900px);max-height:86vh;width:auto;height:auto;border:1px solid rgba(255,255,255,.18);
+        background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb-close{position:absolute;top:22px;right:22px;width:48px;height:48px;background:transparent;
+          border:1px solid rgba(255,255,255,.4);color:#fff;cursor:pointer;
+          display:flex;align-items:center;justify-content:center;transition:.18s}
+.lb-close:hover{background:#fff;border-color:#fff}
+.lb-close svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.lb-close:hover svg{stroke:var(--purple)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;background:transparent;
+        border:1px solid rgba(255,255,255,.4);color:#fff;cursor:pointer;
+        display:flex;align-items:center;justify-content:center;transition:.18s}
+.lb-nav:hover{background:#fff;border-color:#fff}
+.lb-nav svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-nav:hover svg{stroke:var(--purple)}
+.lb-prev{left:24px}
+.lb-next{right:24px}
+.lb-count{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--mono);
+          font-size:11.5px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-mid)}
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:76px;align-items:center}
+.about-left h2{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:.014em;text-transform:uppercase;
+               color:var(--plum-deep);line-height:1.08}
+.about-left h2 em{font-style:normal;color:var(--purple)}
+.about-left .rule{width:40px;height:2px;background:var(--purple);margin:18px 0 26px}
+.about-left p{font-size:17px;line-height:1.68;margin-bottom:16px}
+.about-left p strong{color:var(--ink);font-weight:600}
+.about-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.about-photo{position:relative;background:var(--purple);display:flex;align-items:flex-end;justify-content:center;
+             aspect-ratio:4/5;overflow:hidden}
+.about-photo img{width:100%;height:auto;object-fit:contain;object-position:bottom center}
+
+/* ═══════════════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════════════ */
+.projects{background:var(--purple-deep)}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proj{position:relative;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+      display:block;text-decoration:none;transition:transform .3s,border-color .3s}
+.proj:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.4)}
+/* Swap each .proj-bg background for a real image:
+   background:url('projects/meet-cool-people.jpg') center/cover no-repeat; */
+.proj-bg{position:absolute;inset:0;transition:transform .5s;
+         background:linear-gradient(150deg,#5C1064 0%,#2E0F35 55%,#330B33 100%)}
+.proj:hover .proj-bg{transform:scale(1.05)}
+.proj-overlay{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(51,11,51,0) 35%,rgba(51,11,51,.62) 68%,rgba(51,11,51,.9) 100%)}
+.proj-swap{position:absolute;top:12px;right:12px;z-index:3;font-family:var(--mono);font-size:9.5px;font-weight:400;
+           letter-spacing:.18em;text-transform:uppercase;color:var(--silver-mid);
+           border:1px solid var(--line);padding:4px 8px}
+.proj-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 20px 20px}
+.proj-tag{display:block;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.24em;
+          text-transform:uppercase;color:var(--silver-mid);margin-bottom:8px}
+.proj-name{font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:-.015em;text-transform:none;
+           color:#fff;line-height:1.2;margin-bottom:10px}
+.proj-link{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
+           color:var(--platinum);display:inline-flex;align-items:center;gap:6px;transition:gap .2s,color .2s}
+.proj-link svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.4}
+.proj:hover .proj-link{gap:11px;color:#fff}
+.proj-soon{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.18em;
+           text-transform:uppercase;color:var(--silver-mid);border:1px solid var(--line-strong);padding:4px 10px}
+
+/* ═══════════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════════ */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.faq{background:var(--mist);border-left:3px solid var(--lavender);border-radius:0;padding:28px 30px;transition:border-color .25s}
+.faq:hover{border-left-color:var(--purple)}
+.faq h3{font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:-.015em;text-transform:none;
+        color:var(--plum-deep);margin-bottom:12px}
+.faq p{font-size:15.5px;line-height:1.68}
+
+/* ═══════════════════════════════════════════════
+   CLOSING CTA
+═══════════════════════════════════════════════ */
+.cta{background:var(--purple);text-align:center;padding:100px 0}
+.cta h2{font-family:var(--sans);font-weight:800;font-size:clamp(32px,4.6vw,52px);line-height:1.06;
+        letter-spacing:.008em;text-transform:uppercase;color:#fff}
+.cta h2 em{font-style:normal;color:var(--platinum)}
+.cta .rule{width:40px;height:2px;background:#fff;margin:26px auto 0}
+.cta p{margin:26px auto 40px;max-width:520px;font-size:19px;line-height:1.62;color:rgba(233,225,234,.82)}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{background:#330B33;padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--sans);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:1100px){
+  .proj-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .hero{min-height:auto}
+  .hero-inner{grid-template-columns:1fr;gap:40px;padding:60px 20px}
+  .hero-overlay{background:linear-gradient(160deg,rgba(92,16,100,.96) 0%,rgba(92,16,100,.9) 55%,rgba(46,15,53,.72) 100%)}
+  .split,.book-grid,.about-grid{grid-template-columns:1fr;gap:48px}
+  .grid4,.grid3,.faq-grid{grid-template-columns:1fr 1fr}
+  .book-grid img{max-width:240px;margin:0 auto}
+  .band{height:auto;padding:80px 0}
+  .lb-nav{width:44px;height:44px}
+  .lb-prev{left:10px}.lb-next{right:10px}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(max-width:620px){
+  section{padding:64px 0}
+  .grid4,.grid3,.faq-grid,.t-grid,.proj-grid{grid-template-columns:1fr}
+  .t-solo{max-width:100%}
+  .stat{grid-template-columns:1fr;gap:10px}
+  .optin{padding:26px 22px 22px}
+  .lb{padding:64px 12px 60px}
+  footer{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="home">
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ HERO ═════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Communications Strategist &nbsp;·&nbsp; Audit. Align. Amplify.</p>
+      <h1>
+        Sales says one thing. Marketing says another. <em>HR is having a completely different conversation.</em>
+        <span class="hero-paren">(That&rsquo;s not a culture problem. That&rsquo;s a voice problem.)</span>
+      </h1>
+      <p class="hero-body">
+        I&rsquo;m a communications strategist. I find the real voice that&rsquo;s already sitting inside your company,
+        usually in the founder&rsquo;s head, and get every department saying it. Sales, marketing, PR, social, HR.
+        One voice, not five.
+      </p>
+    </div>
+
+    <div class="optin">
+      <p class="label">Free 5-Day Email Course</p>
+      <h2>See The Method In Your Own Inbox First</h2>
+      <p class="sub">Five short emails. One consistent voice. Under three minutes a day.</p>
+      <form action="https://thefollowupfix.net/" method="post">
+        <input type="text"  name="first_name" placeholder="First name" required autocomplete="given-name">
+        <input type="email" name="email"      placeholder="Email address" required autocomplete="email">
+        <button type="submit" class="btn btn-primary">Send Me The Course</button>
+      </form>
+      <p class="note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ══ FEATURE STRIP ════════════════════════════ -->
+<section>
+  <div class="wrap">
+    <div class="grid4">
+      <div class="feat">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M4 5h16v13H8l-4 3z"/><path d="M8 10h8M8 14h5"/></svg></div>
+        <h3>One Voice, Everywhere</h3><div class="divider"></div>
+        <p>Sales, marketing, social, and HR, all saying the same thing about who you are.</p>
+      </div>
+      <div class="feat">
+        <div class="circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <h3>Built On What&rsquo;s Already True</h3><div class="divider"></div>
+        <p>Not a rebrand. Not a new tagline. The story that&rsquo;s already sitting in the founder.</p>
+      </div>
+      <div class="feat">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M17 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/><path d="M19 8v6M22 11h-6"/></svg></div>
+        <h3>Runs After The Conversation Ends</h3><div class="divider"></div>
+        <p>The voice stays consistent long after the meeting, the call, or the sale.</p>
+      </div>
+      <div class="feat">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M3 13h4l3 7 4-16 3 9h4"/></svg></div>
+        <h3>Done For You</h3><div class="divider"></div>
+        <p>I audit, I write, I build. You don&rsquo;t have to become a copywriter to fix this.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PULL QUOTE ═══════════════════════════════ -->
+<div class="mist pullquote">
+  <div class="wrap">
+    <blockquote>
+      &ldquo;You don&rsquo;t have a marketing problem.<br>
+      <em>You have a voice problem.</em>&rdquo;
+    </blockquote>
+    <div class="rule"></div>
+    <cite>Ely Delaney &nbsp;·&nbsp; The Follow Up Rockstar</cite>
+  </div>
+</div>
+
+<!-- ══ PROBLEM + STATS ══════════════════════════ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Every department is guessing<br><em>at what to say.</em></h2>
+      <div class="rule"></div>
+      <p>The real problem</p>
+    </div>
+
+    <div class="split">
+      <div class="copy">
+        <p>Most founders think this is a marketing problem.<br>Better ads. A rebrand. New brand colors. <strong>It is not.</strong></p>
+        <p>The real story, the real mission, the real personality of the company usually lives in one person&rsquo;s head. The founder&rsquo;s. It never makes it into what sales says on a call, what marketing puts in an ad, or what HR tells a new hire on day one.</p>
+        <p><strong>Every department fills that gap on its own, guessing at what sounds right.</strong> Marketing feels like it is not working. Sales is not converting. HR cannot keep good people. Four departments, four problems, four plans to fix them. Not one voice underneath.</p>
+        <p><strong>Find the voice. Say it clearly. Everything else gets easier.</strong></p>
+      </div>
+
+      <div class="stat-stack">
+        <div class="stat">
+          <div class="num">10%</div>
+          <p>of annual revenue lost, on average, when sales and marketing do not align. Real money, walking out the door. (IDC)</p>
+        </div>
+        <div class="stat">
+          <div class="num">41%</div>
+          <p>of employees who strongly agree their job even matters to the company&rsquo;s mission. (Gallup, via The Happiness Index)</p>
+        </div>
+        <div class="stat">
+          <div class="num">$100K</div>
+          <p>what a $2M company loses a year to that same gap. On a $5M company, a quarter million.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO BAND ═══════════════════════════════ -->
+<div class="band">
+  <div class="band-bg"></div>
+  <div class="band-overlay"></div>
+  <div class="wrap">
+    <p class="q">&ldquo;He keeps it practical. He keeps it real.<br><em>And it keeps working.</em>&rdquo;</p>
+    <p class="attr">Event attendee</p>
+  </div>
+</div>
+
+<!-- ══ HOW WE WORK TOGETHER ═════════════════════ -->
+<section class="mist" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Three ways to build a voice that <em>lasts</em></h2>
+      <div class="rule"></div>
+      <p>How we work together</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>Brand Voice Audit</h3>
+        <div class="cdivider"></div>
+        <p>For founder-led companies where sales, marketing, and HR all sound like they work for different businesses. I run the Audit, Align, Amplify process, find the voice that&rsquo;s already sitting in the founder, and get every department speaking it.</p>
+        <a href="#" class="clink">See The A3 Framework <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="num">02</div>
+        <h3>Follow Up Systems</h3>
+        <div class="cdivider"></div>
+        <p>Done for you automated email campaigns built around your voice and your clients. From the "Follow Up Jumpstart" to the full Ultimate Follow Up System. I build it. You run it.</p>
+        <a href="#" class="clink">See How It Works <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Speaking</h3>
+        <div class="cdivider"></div>
+        <p>Ely speaks to business groups, associations, and corporate teams on why companies end up sounding like five different businesses, and the framework to fix it. Practical, story driven, immediately usable.</p>
+        <a href="speaking.html" class="clink">Book Ely To Speak <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOOK ═════════════════════════════════════ -->
+<section class="book on-dark" id="book">
+  <div class="wrap">
+    <div class="book-grid">
+      <div><img src="followupcode-cover3d-stack-1500x1984.png" alt="The Follow Up Code by Ely Delaney"></div>
+      <div class="book-right">
+        <h2>The Follow Up Code</h2>
+        <div class="rule"></div>
+        <p>Built around the seven virtues of Bushido, <em>The Follow Up Code</em> is a practical guide to building real trust through email. The kind that turns prospects into clients and clients into advocates.</p>
+        <p>This is not a book about tactics. It is about the philosophy behind why some follow up works and most does not.</p>
+        <div class="virtues">
+          <span class="virtue">Rectitude</span>
+          <span class="virtue">Courage</span>
+          <span class="virtue">Benevolence</span>
+          <span class="virtue">Respect</span>
+          <span class="virtue">Honesty</span>
+          <span class="virtue">Honor</span>
+          <span class="virtue">Loyalty</span>
+        </div>
+        <a href="https://amzn.to/4c4exEM" target="_blank" rel="noopener" class="btn btn-light">Get The Book On Amazon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ═════════════════════════════ -->
+<section>
+  <div class="wrap-wide">
+    <div class="sec-head">
+      <h2>Real results from <em>real professionals</em></h2>
+      <div class="rule"></div>
+      <p>What people are saying</p>
+    </div>
+
+    <p class="t-hint">
+      <span>
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg>
+        Click any testimonial to read it full size
+      </span>
+    </p>
+
+    <div class="t-grid" id="tGrid">
+      <div class="t-item" data-src="Testimonials/MichaelBuzinski.jpg" data-alt="Testimonial from Michael Buzinski">
+        <img src="Testimonials/MichaelBuzinski.jpg" alt="Testimonial from Michael Buzinski">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/NilsVinje.jpg" data-alt="Testimonial from Nils Vinje">
+        <img src="Testimonials/NilsVinje.jpg" alt="Testimonial from Nils Vinje">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/LeeStringham.jpg" data-alt="Testimonial from Lee Stringham">
+        <img src="Testimonials/LeeStringham.jpg" alt="Testimonial from Lee Stringham">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/LoriHoward.jpeg" data-alt="Testimonial from Lori Howard">
+        <img src="Testimonials/LoriHoward.jpeg" alt="Testimonial from Lori Howard">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/JeffLoyd.jpg" data-alt="Testimonial from Jeff Loyd">
+        <img src="Testimonials/JeffLoyd.jpg" alt="Testimonial from Jeff Loyd">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/MikeAirheart.jpg" data-alt="Testimonial from Mike Airhart">
+        <img src="Testimonials/MikeAirheart.jpg" alt="Testimonial from Mike Airhart">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item t-solo" data-src="Testimonials/DustinHelms.jpg" data-alt="Testimonial from Dustin Helms">
+        <img src="Testimonials/DustinHelms.jpg" alt="Testimonial from Dustin Helms">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+    </div>
+
+    <p class="t-note">Click any testimonial to read it full size</p>
+  </div>
+</section>
+
+<!-- ══ LIGHTBOX ═════════════════════════════════ -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Testimonial viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <p class="lb-count" id="lbCount"></p>
+</div>
+
+<!-- ══ ABOUT ════════════════════════════════════ -->
+<section class="mist" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-left">
+        <h2>Communications Strategist.<br><em>The People Whisperer.</em></h2>
+        <div class="rule"></div>
+        <p>Ely Delaney is a communications strategist. He works two ways.</p>
+        <p>With founder-led companies, he steps in as an outside Communications Director. He finds the real brand voice, usually already living in the founder, and builds sales, marketing, PR, social, and HR around it. One voice. One story. Said clearly.</p>
+        <p>With coaches, consultants, and fractional executives, he runs the same process at a smaller scale through the Follow Up Rockstar program. Nail the real voice first. Then build the system that keeps it consistent with warm prospects until they&rsquo;re ready to buy.</p>
+        <p>He started in web design in 1995. He pivoted to relationship marketing. He built campaigns that are still running a decade later. He speaks to thousands of professionals every year about the one thing most of them get wrong.</p>
+        <p><strong>You don&rsquo;t have a marketing problem. You have a voice problem.</strong></p>
+        <div class="about-btns">
+          <a href="https://followuprockstar.com/call" class="btn btn-primary">Book A Call</a>
+          <a href="speaking.html" class="btn btn-ghost">Speaking Topics</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="elydelaney01-clear.png" alt="Ely Delaney, Communications Strategist">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ═════════════════════════════════ -->
+<section class="projects on-dark" id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Projects</h2>
+      <div class="rule"></div>
+      <p>Beyond the follow up</p>
+    </div>
+
+    <div class="proj-grid">
+
+      <a href="https://meetcoolpeople.live" target="_blank" rel="noopener" class="proj">
+        <div class="proj-bg"></div>
+        <div class="proj-overlay"></div>
+        <span class="proj-swap">Add image</span>
+        <div class="proj-text">
+          <span class="proj-tag">Podcast</span>
+          <p class="proj-name">Meet Cool People</p>
+          <span class="proj-link">meetcoolpeople.live <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <a href="#" class="proj">
+        <div class="proj-bg"></div>
+        <div class="proj-overlay"></div>
+        <span class="proj-swap">Add image</span>
+        <div class="proj-text">
+          <span class="proj-tag">Courses</span>
+          <p class="proj-name">Do It Yourself Courses</p>
+          <span class="proj-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <a href="#" class="proj">
+        <div class="proj-bg"></div>
+        <div class="proj-overlay"></div>
+        <span class="proj-swap">Add image</span>
+        <div class="proj-text">
+          <span class="proj-tag">Passion Project</span>
+          <p class="proj-name">Archer&rsquo;s Journey</p>
+          <span class="proj-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <a href="#" class="proj">
+        <div class="proj-bg"></div>
+        <div class="proj-overlay"></div>
+        <span class="proj-swap">Add image</span>
+        <div class="proj-text">
+          <span class="proj-tag">Newsletter</span>
+          <p class="proj-name">7th Fold</p>
+          <span class="proj-soon">Coming Soon</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>You probably have <em>a few questions</em></h2>
+      <div class="rule"></div>
+      <p>Common questions</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq">
+        <h3>What do you actually do?</h3>
+        <p>I&rsquo;m a communications strategist. I find the voice that&rsquo;s already sitting inside a company, usually in the founder, and get sales, marketing, PR, social, and HR all saying it. For coaches and consultants, I run a lighter version of the same process through the Follow Up Rockstar program, matched to individual follow up.</p>
+      </div>
+      <div class="faq">
+        <h3>What&rsquo;s the A3 Framework?</h3>
+        <p>Three steps. Audit: find where the story splits, department by department. Align: sit down with the founder, pull the real voice, build one Brand Voice Profile. Amplify: roll it out, sales and social first, then inward to HR.</p>
+      </div>
+      <div class="faq">
+        <h3>Do you work with people just starting out?</h3>
+        <p>Yes. The free Follow Up Fix email course is the best first step. If you want something done for you, the "Follow Up Jumpstart" is the right entry point.</p>
+      </div>
+      <div class="faq">
+        <h3>Do you do speaking engagements?</h3>
+        <p>Absolutely. I speak to business associations, mastermind groups, chambers of commerce, and corporate teams on the voice problem behind most marketing and sales breakdowns. Head to the Speaking page for topics and availability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING CTA ══════════════════════════════ -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready to stop sounding <em>like five different companies?</em></h2>
+    <div class="rule"></div>
+    <p>Let&rsquo;s find the voice that&rsquo;s already there, get every department saying it, and build a system that keeps it consistent long after the first conversation.</p>
+    <a href="https://followuprockstar.com/call" class="btn btn-white">Book A Free Strategy Call</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+
+      <!-- Brand column -->
+      <div class="foot-brand">
+        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal column -->
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Nav ─────────────────────────────────── */
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ── Nav active state, driven by body[data-page] so the nav
+   markup itself stays identical across every page ────────── */
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+
+/* ── Copyright year, updates itself ──────── */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── Testimonial lightbox ────────────────── */
+(function(){
+  var items   = Array.prototype.slice.call(document.querySelectorAll('.t-item'));
+  var lb      = document.getElementById('lightbox');
+  var lbImg   = document.getElementById('lbImg');
+  var lbCount = document.getElementById('lbCount');
+  var current = 0;
+  var lastFocus = null;
+
+  function show(i){
+    current = (i + items.length) % items.length;
+    var el = items[current];
+    lbImg.src = el.getAttribute('data-src');
+    lbImg.alt = el.getAttribute('data-alt') || '';
+    lbCount.textContent = (current + 1) + ' of ' + items.length;
+  }
+
+  function open(i){
+    lastFocus = document.activeElement;
+    show(i);
+    lb.classList.add('open');
+    document.body.classList.add('locked');
+    document.getElementById('lbClose').focus();
+  }
+
+  function close(){
+    lb.classList.remove('open');
+    document.body.classList.remove('locked');
+    lbImg.src = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  items.forEach(function(el, i){
+    el.setAttribute('tabindex','0');
+    el.setAttribute('role','button');
+    el.addEventListener('click', function(){ open(i); });
+    el.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+    });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function(){ show(current - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ show(current + 1); });
+
+  lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
+
+</body>
+</html>

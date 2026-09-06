@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney &middot; Affiliate Agreement</title>
+<meta name="description" content="Affiliate Agreement for Purple Knight Marketing and Ely Delaney.">
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#5C1064;
+  --purple-deep:#3C1C44;
+  --ink:#330B33;
+  --purple-mid:#944C9C;
+  --orchid:#BC64C4;
+  --slate-plum:#6B5464;
+  --gray:#949C9C;
+  --lavender:#E4DCE4;
+  --mist:#F5F2F6;
+  --white:#fff;
+
+  --display:'Archivo',Tahoma,sans-serif;
+  --body:'Inter',Tahoma,sans-serif;
+
+  --container:1170px;
+  --nav-h:70px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+.btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--lavender)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* LEGAL SUBNAV */
+.legal-subnav{background:var(--mist);border-bottom:1px solid var(--lavender);margin-top:var(--nav-h)}
+.legal-subnav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px}
+.legal-subnav a{display:inline-block;padding:13px 14px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.7px;
+                 text-transform:uppercase;color:var(--slate-plum);text-decoration:none;border-bottom:2px solid transparent;
+                 white-space:nowrap;transition:.15s}
+.legal-subnav a:hover{color:var(--purple)}
+.legal-subnav a.on{color:var(--purple);border-bottom-color:var(--purple)}
+
+/* LEGAL HERO + BODY */
+.legal-hero{background:var(--purple-deep);padding:50px 0 40px;text-align:center}
+.legal-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,32px);line-height:1.25;letter-spacing:-.3px;color:#fff;max-width:760px;margin:0 auto}
+
+.legal-body{padding:60px 0 100px}
+.legal-content{max-width:760px;margin:0 auto}
+.legal-content p{font-size:14.5px;line-height:1.85;margin-bottom:18px;color:var(--slate-plum)}
+.legal-content h3{font-family:var(--display);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.3px;color:var(--ink);margin:32px 0 14px}
+.legal-content h3:first-child{margin-top:0}
+.legal-content ul{margin:0 0 18px 20px}
+.legal-content li{font-size:14.5px;line-height:1.8;margin-bottom:8px;color:var(--slate-plum)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--body);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="affiliateagreement">
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="legal-subnav">
+  <div class="wrap">
+      <a href="terms-and-conditions.html">Terms and Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="amazon-affiliate-disclaimer.html">Amazon Affiliate Disclaimer</a>
+      <a href="anti-spam-policy.html">Anti-Spam Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="digital-millennium-copyright-act-notice.html">Digital Millennium Copyright</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="program-terms-and-conditions.html">Program Terms and Conditions</a>
+      <a href="hosting-terms-conditions.html">Hosting Terms &amp; Conditions</a>
+      <a href="retainertos.html">Retainer Terms &amp; Conditions</a>
+      <a href="affiliate-agreement.html" class="on">Affiliate Agreement</a>
+  </div>
+</div>
+
+<header class="legal-hero">
+  <div class="wrap">
+    <h1>Affiliate Agreement</h1>
+  </div>
+</header>
+
+<div class="legal-body">
+  <div class="wrap">
+    <div class="legal-content">
+      <p>By signing up as an affiliate with Purple Knight Marketing, you agree to the following Terms of Service.</p>
+      <p>“Purple Knight Marketing”, &rdquo;PKM&rdquo;, &rdquo;Follow Up Rockstar System&rdquo;, etc are owned and operated by Purple Knight Marketing. In this agreement, “Follow Up Rockstar System” and Purple Knight Marketing are collectively referred to as “FURS or PKM” This agreement is by and between Purple Knight Marketing and/or their assigns and all subscribers. Unless the context requires otherwise, PKM and/or their assigns shall be referred to as “us, we, or our” and you shall be referred to as “you, your or subscriber.”</p>
+      <p>You understand that PKM and/or their assigns does not guarantee or predict any type of profit or response from said services. Subscriber agrees to hold PKM harmless from and against any and all losses, claims, expenses, suits, damages, costs, demands or liabilities, joint or several, of whatever kind or nature which PKM and/or their assigns may become subject arising out of or relating in any way to the use of the services provided under this agreement, including, without limitation, in each case attorneys” fees, costs and expenses actually incurred in defending against or enforcing any such losses, claims, expenses, suits, damages or liabilities.This agreement describes the entire terms and conditions for participation in the Purple Knight Marketing Affiliate Program.</p>
+      <p>Definitions:</p>
+      <p>Affiliates – include all parties that refer visitors to Purple Knight Marketing websites in order to purchase products and services. In this agreement, the term “Participant” and “Affiliate” refers to all accepted affiliate program applicants.</p>
+      <p>Sponsoring promotion – refers to the promotion from which you will link to a Purple Knight Marketing site/program/order page/etc. Wherever the agreement refers to “you” or “your”, it means “Participant”; “we” or “our” refer to Purple Knight Marketing. The terms “product” or “products” refer to all products and services that have the ability to be sold through Purple Knight Marketing affiliate links. Whenever the agreement refers to an Affiliate “selling” or having the ability to “sell” or “resell” refers to the process of an Affiliate referring people to a Purple Knight Marketing website(s), event, download, order page, etc for the purpose of purchasing products.</p>
+      <p>Commissionable Products:</p>
+      <p>Purple Knight Marketing offers several products and services that can be promoted by an affiliate in order to earn commissions. Purple Knight Marketing will link all affiliate resalable products into the online Affiliate Resource Center.</p>
+      <p>You can add or remove links at any time:</p>
+      <p>You may add or remove as many links to Purple Knight Marketing programs/offers/events/etc at anytime and without prior approval from Purple Knight Marketing.</p>
+      <p>Commission Amount:</p>
+      <p>Every product that is available to be promoted in the Purple Knight Marketing Affiliate program has a set commission assigned to it. Purple Knight Marketing can change the commission payable at any time. PKM will do its best to inform affiliates of any change to the program commission structure. Only qualifying products that are sold by Purple Knight Marketing, shipped/sent to a end customer and for which Purple Knight Marketing has received full payment will qualify for a commission.</p>
+      <p>The total of such sales in any given month will generate commissions for the Affiliate, based upon the applicable flat rate commission for each product.</p>
+      <p>Commission Payment:</p>
+      <p>Purple Knight Marketing will issue a commission payment, for the previous calendar month’s commissions earned, by the last day of the following calendar month. Purple Knight Marketing will do its best to ensure commission payments are issued in this time frame.</p>
+      <p>A statement of customer purchase activity is located in the online Affiliate Resource Center.</p>
+      <p>Returns and Cancellations:</p>
+      <p>If a commission qualifying product is later returned by the customer, its commission will be deducted from the next monthly payment sent to the Participant. If there is no next monthly payment, the Participant will be billed.</p>
+      <p>Order Processing:</p>
+      <p>Purple Knight Marketing will be solely responsible for processing every order placed by a customer following an Affiliate link from your sponsoring promotion. Customers can order through Purple Knight Marketin&rsquo;s secure online ordering process or by contacting Purple Knight Marketing directly via phone or email or various online avenues. Order forms, payment processing, shipping, cancellations, returns, and related customer service are the responsibility of Purple Knight Marketing.</p>
+      <p>All of the rules, operating procedures and policies of Purple Knight Marketing regarding customer orders and accounts will apply to orders we receive through tracking links on your sponsoring website. Purple Knight Marketing reserves the right to reject any order that does not comply with our rules, operating procedures and policies.</p>
+      <p>Tracking of Sales:</p>
+      <p>Purple Knight Marketing will be solely responsible for tracking sales generated via supplied affiliate tracking links from the sponsoring promotion. The Participant will be solely responsible for ensuring that the affiliate tracking links are working properly, a necessary prerequisite to tracking such sales. Statements of product sales activity will be provided to the Participant through the Affiliate Resource Center. Affiliate links and their traffic are governed and tracked by applying cookies to the prospect&rsquo;s computer. If the end user has something in place to block those being applied or removes them then Purple Knight Marketing is not responsible for the inablity to track that activity.</p>
+      <p>Promotional Techniques:</p>
+      <p>You are free to promote Purple Knight Marketing programs and offers in all the ways we endorse. Examples of acceptable ways to promote the course are: through banners and text links on your website, letters of recommendation to your newsletters subscribers or your customers. However, if you resell our products through unsolicited email (in any way, shape or form, including newsgroup spamming), or on any WAREZ, CRACK, or SPAM oriented website; your account will be immediately terminated. Any referral fees not paid up to the point of termination will not be paid to you and will be property of Purple Knight Marketing.</p>
+      <p>Affiliate Representation:</p>
+      <p>You are not permitted to represent yourself as an employee of Purple Knight Marketing. You are not permitted to use images, copy or any other promotional material that is unauthorized by Purple Knight Marketing. You are not permitted to represent yourself as Purple Knight Marketing and/or any PKM employee/representative/etc in any marketing materials. Purple Knight Marketing has the right to request removal of any marketing materials or web sites that are used to promote PKM products/programs/offers that Purple Knight Marketing deems unacceptable. If you do not comply, Purple Knight Marketing has the right to terminate your affiliate account and could seek legal counsel. Any referral fees not paid up to the point of termination will not be paid to you and will be property of Purple Knight Marketing.</p>
+      <p>References/Testimonials:</p>
+      <p>You agree to cooperate with Purple Knight Marketing in the development of joint press releases and testimonials. You further agree that you will allow us to use your company name in marketing collaterals and make reference to you on our website.</p>
+      <p>Earning Commission On Your Own Purchase:</p>
+      <p>Purple Knight Marketing will not pay a commission on a purchase of a product or service that you make through your own affiliate account. This action is not permitted. If you are earning commissions on the sales of PKM products to third parties and want to get a copy of a product please contact the affiliate support team.</p>
+      <p>Copyrighted material:</p>
+      <p>As the Participant, you are solely responsible for ensuring that your reviews, product descriptions and articles (if applicable at your site) obey all applicable copyright and other laws. You must have express permission to use another party’s copyrighted material. Purple Knight Marketing will not be responsible if you use another party’s copyrighted material in violation of the law.</p>
+      <p>Purple Knight Marketing policy applies to all orders:</p>
+      <p>Every customer who buys a product through our Affiliate program is deemed to be a customer of Purple Knight Marketing. Any contact who opts in and downloads content or participates in an event hosted by Purple Knight Marketing is concidered a lead or prospect of Purple Knight Marketing.</p>
+      <p>The Participant/Affiliate/Referral Partner does not have the authority to make or accept any offer on behalf of Purple Knight Marketing. All Purple Knight Marketing policies regarding customer orders, including product availability, pricing and problem resolution, will apply to these customers and prospects. Purple Knight Marketing is not responsible for any representations made by the Participant/Affiliate/Referral Partner which contradict our policies.</p>
+      <p>Product prices and availability:</p>
+      <p>The price charged for every product sold under this program will be determined by Purple Knight Marketing according to our own pricing policies. In case of any price discrepancies, the price charged to the customer will always be the price listed on Purple Knight Marketing webpage linked from your sponsoring website minus any discounts, coupons or specials offered at the time of purchase.</p>
+      <p>Product/Program availability can change, and Purple Knight Marketing will present the best information available to all participants and it’s referred customers regarding product availability.</p>
+      <p>Website service interruption:</p>
+      <p>Purple Knight Marketing will make every effort to keep its website(s) operational. However, certain technical difficulties may, from time to time, result in temporary service interruptions. The Participant agrees not to hold Purple Knight Marketing liable for any of the consequences of such interruptions.</p>
+      <p>Trademarks, Trade Names, &amp; Patents:</p>
+      <p>You hereby recognize our right of ownership of all Trademarks, Trade Names, and Patents and Copywrite associated with these services. You will act consistently with these rights and act to preserve them in the course of marketing and sales of these services. We grant you the right to our Trademarks and Trade Names in connection with marketing and sales of these services only</p>
+      <p>.</p>
+      <p>Tax Information:</p>
+      <p>Purple Knight Marketing requires you to submit your tax information in order for PKM to comply with Tax regulators in the United States and in turn pay you commissions on sales. You are required to submit your tax information prior to receiving any commission payments. You email a completed W-9 form to [email protected] as soon as possible. Purple Knight Marketing has the right to withhold commission payment if you fail to submit your tax information. This completed form can also be mailed to Purple Knight Marketing 5908 Holiday Lane A, North Richland Hills, Texas 76180.</p>
+      <p>Taxes will not be withheld from your commission payments. All applicable income taxes are the responsibility of the Affiliate. At the end of each calendar year a 1099 form will be issued to each affiliate and submitted to the IRS as governed by their laws.</p>
+      <p>Term of the Agreement:</p>
+      <p>The Participant may receive commission payments on qualifying orders that are placed during the term of this agreement. This term will begin on the date that your application is approved by Purple Knight Marketing, and shall end when canceled by either party as provided below.</p>
+      <p>Referral Fees earned through the date of expiration or cancellation of this agreement will remain payable only if the products are not returned or canceled from their orders. Payment of the final commission payment to the Participant may be withheld for a reasonable time in order to ensure that the correct amount is paid.</p>
+      <p>The agreement may be modified:</p>
+      <p>Purple Knight Marketing reserves the right to change any of the terms and conditions in this agreement, at any time and in its sole discretion, by posting a new agreement on our website.</p>
+      <p>Cancellation of this agreement:</p>
+      <p>Either PKM or the Participant, acting in their sole discretion, may choose to cancel this agreement at any time by written notice of cancellation to the other. The Participant’s Affiliate account will be disabled and all current and future commissions will not be paid.</p>
+      <p>Warranty Disclaimer:</p>
+      <p>Purple Knight Marketing makes no warranties, representations or conditions with regard to the program or, except as expressly set forth in YPurple Knight Marketing’s then current product sales policies, any products sold thereunder, whether express or implied, arising by law or otherwise, including without limitation any implied warranty of merchantability or fitness for a particular purpose or non-infringement or any implied warranty arising out of course of performance, course of dealing or usage of trade.</p>
+      <p>Limitation of Damages:</p>
+      <p>Purple Knight Marketing shall have no liability for any indirect, incidental, special or consequential damages or any loss of revenue or profits arising under or with respect to this agreement or the program, even if Purple Knight Marketing has been advised of the possibility of such damages. Further, Purple Knight Marketing’s aggregate liability arising under or with respect to this agreement or the program shall in no event exceed the total referral fees paid or payable by Purple Knight Marketing to Participant under this agreement.</p>
+      <p>Miscellaneous:</p>
+      <p>Participant and Purple Knight Marketing are independent contractors and nothing in this agreement is intended to or will create any form of partnership, joint venture, agency, franchise, sales representative or employment relationship between the parties. Participant shall not assign this Agreement, by operation of law or otherwise, without the prior written consent of Purple Knight Marketing. Subject to the foregoing restriction, this agreement is binding upon, insures to the benefit of and is enforceable by the parties and their respective successors and assigns.</p>
+      <p>Governing Law:</p>
+      <p>This agreement shall be governed by the laws of Texas, United States of America.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

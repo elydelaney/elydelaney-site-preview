@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ═══════════════════════════════════════════════════════════
+     WEBINAR LANDING PAGE TEMPLATE
+     Built to Visual Style Guide v1.2
+     Footer, testimonial grid + lightbox, and bio pulled from
+     homepage-v4.html so both pages stay in sync.
+     Everything marked [EDIT] is meant to be swapped per event.
+     COPY IS PLACEHOLDER. Design is the deliverable for now.
+═══════════════════════════════════════════════════════════ -->
+
+<title>Free Live Training with Ely Delaney</title>
+<meta name="description" content="A free live training on the three components that turn casual connections into clients. Hosted by Ely Delaney, The Follow Up Rockstar.">
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS — Visual Style Guide v1.2
+═══════════════════════════════════════════════ */
+:root{
+  --purple:#5C1064;
+  --purple-deep:#3C1C44;
+  --ink:#330B33;
+  --purple-mid:#944C9C;
+  --orchid:#BC64C4;
+  --slate-plum:#6B5464;
+  --gray:#949C9C;
+  --lavender:#E4DCE4;
+  --mist:#F5F2F6;
+  --white:#fff;
+
+  --display:'Archivo',Tahoma,sans-serif;
+  --body:'Inter',Tahoma,sans-serif;
+
+  --container:1170px;
+  --container-wide:1400px;
+  --nav-h:70px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);background:#fff;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:var(--purple)}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+.wrap-wide{max-width:var(--container-wide);margin:0 auto;padding:0 20px}
+section{padding:90px 0}
+.mist{background:var(--mist)}
+
+/* ── Section header pattern ────────────────── */
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-head h2{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.5px;text-transform:uppercase;color:var(--ink);line-height:1.2}
+.sec-head h2 em{font-style:normal;color:var(--purple)}
+.sec-head .rule{width:40px;height:2px;background:var(--purple);margin:18px auto 0}
+.sec-head p{margin-top:22px;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--gray)}
+.on-dark .sec-head h2{color:#fff}
+.on-dark .sec-head h2 em{color:var(--lavender)}
+.on-dark .sec-head .rule{background:#fff}
+.on-dark .sec-head p{color:rgba(255,255,255,.5)}
+
+/* ── Buttons ───────────────────────────────── */
+.btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;
+     text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;
+     border:1px solid transparent;transition:.18s;cursor:pointer;text-align:center}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-primary:hover{background:var(--purple-mid)}
+.btn-ghost{background:transparent;color:var(--slate-plum);border-color:var(--lavender)}
+.btn-ghost:hover{color:var(--purple);border-color:var(--purple)}
+.btn-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-light:hover{background:#fff;color:var(--purple)}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--lavender)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--purple)}
+.btn-lg{padding:21px 52px;font-size:14px}
+
+/* ═══════════════════════════════════════════════
+   ATTENTION BAR
+═══════════════════════════════════════════════ */
+.attn-bar{background:var(--ink);padding:13px 0;text-align:center}
+.attn-bar p{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.8px;
+            text-transform:uppercase;color:rgba(255,255,255,.78);line-height:1.5}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+#nav{background:var(--purple);height:var(--nav-h);display:flex;align-items:center}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:36px;width:auto}
+.nav-cta{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+         color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.55);padding:10px 18px;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero{position:relative;overflow:hidden;padding:0}
+.hero-bg{position:absolute;inset:0;z-index:0;background:url('Home_Background.png') center 28%/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,
+    rgba(92,16,100,.97)  0%,
+    rgba(92,16,100,.94) 38%,
+    rgba(92,16,100,.78) 58%,
+    rgba(60,28,68,.50)  82%,
+    rgba(60,28,68,.18) 100%);}
+.hero-inner{position:relative;z-index:2;max-width:var(--container);margin:0 auto;padding:88px 20px 92px;
+            display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+
+.hero-eyebrow{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:2.6px;
+              text-transform:uppercase;color:var(--lavender);margin-bottom:20px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.4vw,48px);line-height:1.08;
+         letter-spacing:-.5px;text-transform:uppercase;color:#fff}
+.hero h1 em{font-style:normal;color:var(--orchid)}
+.hero-paren{display:block;margin-top:18px;font-family:var(--body);font-style:italic;font-weight:400;
+            font-size:18px;letter-spacing:0;text-transform:none;color:rgba(255,255,255,.55);line-height:1.55}
+.hero-body{margin-top:24px;font-size:16px;line-height:1.8;color:rgba(255,255,255,.66);max-width:470px}
+.hero-body strong{color:#fff;font-weight:600}
+
+/* Registration card */
+.reg{background:#fff;border-radius:0;padding:34px 32px 28px;box-shadow:0 24px 60px rgba(51,11,51,.34)}
+.reg .label{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:2px;
+            text-transform:uppercase;color:var(--purple);margin-bottom:12px}
+.reg h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.25;color:var(--ink);margin-bottom:8px}
+.reg .sub{font-size:13.5px;line-height:1.6;color:var(--slate-plum);margin-bottom:20px}
+
+.reg-when{border-top:1px solid var(--lavender);border-bottom:1px solid var(--lavender);
+          padding:16px 0;margin-bottom:20px;display:flex;gap:26px}
+.reg-when div{flex:1}
+.reg-when span{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:1.6px;
+               text-transform:uppercase;color:var(--gray);margin-bottom:5px}
+.reg-when strong{display:block;font-family:var(--display);font-size:15px;font-weight:700;color:var(--ink);line-height:1.3}
+
+.reg form{display:flex;flex-direction:column;gap:10px}
+.reg input,
+.reg textarea{border:1px solid var(--lavender);border-radius:0;padding:14px 15px;font-family:var(--body);
+              font-size:14px;line-height:1.6;color:var(--ink);outline:none;transition:border-color .2s;
+              background:#fff;width:100%;display:block}
+.reg textarea{resize:vertical;min-height:104px}
+.reg input::placeholder,
+.reg textarea::placeholder{color:var(--gray)}
+.reg input:focus,
+.reg textarea:focus{border-color:var(--purple)}
+.reg button{width:100%;margin-top:4px;padding:16px 24px;font-size:12.5px}
+.reg .note{margin-top:13px;font-size:11.5px;color:var(--gray);text-align:center;line-height:1.5}
+
+/* ═══════════════════════════════════════════════
+   PULL QUOTE BANDS
+═══════════════════════════════════════════════ */
+.quote-band{background:var(--ink);padding:70px 0}
+.quote-band .wrap{display:grid;grid-template-columns:88px 1fr;gap:38px;align-items:start;max-width:960px}
+.quote-mark{font-family:var(--display);font-size:96px;font-weight:800;line-height:.72;color:var(--purple-mid);opacity:.85}
+.quote-band blockquote{border-left:1px solid rgba(255,255,255,.18);padding-left:38px}
+.quote-band p{font-size:15.5px;line-height:1.85;color:rgba(255,255,255,.72);margin-bottom:16px}
+.quote-band p:last-of-type{margin-bottom:22px}
+.quote-band cite{font-family:var(--display);font-style:normal;font-size:14px;font-weight:700;
+                 letter-spacing:.5px;color:#fff}
+
+/* ═══════════════════════════════════════════════
+   PROBLEM SECTION
+═══════════════════════════════════════════════ */
+.problem{background:var(--purple);padding:90px 0}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.problem .eyebrow{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:2.6px;
+                  text-transform:uppercase;color:var(--lavender);margin-bottom:16px}
+.problem h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.2vw,40px);line-height:1.1;
+            letter-spacing:-.5px;text-transform:uppercase;color:#fff}
+.problem .rule{width:40px;height:2px;background:#fff;margin:24px 0 30px}
+.away-list{list-style:none}
+.away-list li{font-family:var(--display);font-size:17px;font-weight:700;text-transform:uppercase;
+              letter-spacing:.5px;color:rgba(255,255,255,.9);padding:11px 0 11px 26px;position:relative;
+              border-bottom:1px solid rgba(255,255,255,.14)}
+.away-list li::before{content:'';position:absolute;left:0;top:20px;width:12px;height:1px;background:rgba(255,255,255,.5)}
+.away-list li:last-child{border-bottom:0;color:rgba(255,255,255,.45);font-size:15px}
+.problem-copy{margin-top:32px}
+.problem-copy p{font-size:16px;line-height:1.85;color:rgba(255,255,255,.66);margin-bottom:16px}
+.problem-copy p.punch{color:#fff;font-weight:600}
+.problem-photo img{width:100%;border:1px solid rgba(255,255,255,.18)}
+
+/* ═══════════════════════════════════════════════
+   WHAT YOU'LL LEARN
+═══════════════════════════════════════════════ */
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.learn-item{text-align:center}
+.learn-num{width:90px;height:90px;border:1px solid var(--lavender);border-radius:0;margin:0 auto;
+           display:flex;align-items:center;justify-content:center;
+           font-family:var(--display);font-size:26px;font-weight:700;color:var(--purple)}
+.learn-item h3{font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.5px;
+               text-transform:uppercase;color:var(--ink);margin-top:25px}
+.learn-item .divider{width:30px;height:1px;background:var(--lavender);margin:15px auto}
+.learn-item p{font-size:14px;line-height:1.75;color:var(--slate-plum);max-width:290px;margin:0 auto}
+
+/* ═══════════════════════════════════════════════
+   MID CTA BAND
+═══════════════════════════════════════════════ */
+.band{position:relative;overflow:hidden;padding:0}
+.band-bg{position:absolute;inset:0;z-index:0;background:url('Home_Background.png') center 60%/cover no-repeat}
+.band-overlay{position:absolute;inset:0;z-index:1;background:rgba(60,28,68,.88)}
+.band-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:96px 20px;text-align:center}
+.band-inner h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,2.8vw,34px);line-height:1.2;
+               letter-spacing:-.3px;text-transform:uppercase;color:#fff}
+.band-inner .rule{width:40px;height:2px;background:#fff;margin:24px auto 0}
+.band-inner p{margin:26px auto 38px;max-width:600px;font-size:16px;line-height:1.85;color:rgba(255,255,255,.7)}
+
+/* ═══════════════════════════════════════════════
+   TESTIMONIALS — two across, wide container
+   (matches homepage-v4)
+═══════════════════════════════════════════════ */
+.t-hint{text-align:center;font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:2px;
+        text-transform:uppercase;color:var(--gray);margin-bottom:40px}
+.t-hint span{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--lavender);padding:11px 20px}
+.t-hint svg{width:15px;height:15px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.t-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.t-item{display:block;position:relative;border:1px solid var(--lavender);background:#fff;padding:0;cursor:zoom-in;
+        transition:border-color .25s,transform .25s,box-shadow .25s;overflow:hidden}
+.t-item:hover{border-color:var(--purple);transform:translateY(-3px);box-shadow:0 14px 34px rgba(51,11,51,.10)}
+.t-item img{width:100%;height:auto}
+.t-item .zoom{position:absolute;top:12px;right:12px;width:34px;height:34px;background:var(--purple);
+              display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
+.t-item:hover .zoom{opacity:1}
+.t-item .zoom svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.t-solo{grid-column:1 / -1;max-width:calc(50% - 13px);margin:0 auto}
+.t-note{text-align:center;margin-top:36px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray)}
+
+/* ── Lightbox ─────────────────────────────── */
+.lb{position:fixed;inset:0;z-index:900;display:none;align-items:center;justify-content:center;
+    background:rgba(51,11,51,.93);padding:70px 24px 24px}
+.lb.open{display:flex}
+.lb-img{max-width:min(92vw,900px);max-height:86vh;width:auto;height:auto;border:1px solid rgba(255,255,255,.18);
+        background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb-close{position:absolute;top:22px;right:22px;width:48px;height:48px;background:transparent;
+          border:1px solid rgba(255,255,255,.4);color:#fff;cursor:pointer;
+          display:flex;align-items:center;justify-content:center;transition:.18s}
+.lb-close:hover{background:#fff;border-color:#fff}
+.lb-close svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.lb-close:hover svg{stroke:var(--purple)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;background:transparent;
+        border:1px solid rgba(255,255,255,.4);color:#fff;cursor:pointer;
+        display:flex;align-items:center;justify-content:center;transition:.18s}
+.lb-nav:hover{background:#fff;border-color:#fff}
+.lb-nav svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-nav:hover svg{stroke:var(--purple)}
+.lb-prev{left:24px}
+.lb-next{right:24px}
+.lb-count{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--display);
+          font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+/* ═══════════════════════════════════════════════
+   ABOUT ELY
+═══════════════════════════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:76px;align-items:center}
+.about-left h2{font-family:var(--display);font-weight:700;font-size:30px;letter-spacing:.5px;text-transform:uppercase;
+               color:var(--ink);line-height:1.2}
+.about-left h2 em{font-style:normal;color:var(--purple)}
+.about-left .rule{width:40px;height:2px;background:var(--purple);margin:18px 0 26px}
+.about-left p{font-size:15px;line-height:1.85;margin-bottom:16px}
+.about-left p strong{color:var(--ink);font-weight:600}
+.about-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.about-photo{position:relative;background:var(--purple);display:flex;align-items:flex-end;justify-content:center;
+             aspect-ratio:4/5;overflow:hidden}
+.about-photo img{width:100%;height:auto;object-fit:contain;object-position:bottom center}
+
+/* ═══════════════════════════════════════════════
+   CLOSING CTA
+═══════════════════════════════════════════════ */
+.cta{background:var(--purple);text-align:center;padding:100px 0}
+.cta h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.6vw,44px);line-height:1.15;
+        letter-spacing:-.5px;text-transform:uppercase;color:#fff}
+.cta h2 em{font-style:normal;color:var(--lavender)}
+.cta .rule{width:40px;height:2px;background:#fff;margin:26px auto 0}
+.cta p{margin:26px auto 40px;max-width:560px;font-size:16px;line-height:1.8;color:rgba(255,255,255,.68)}
+.cta .when{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+           color:rgba(255,255,255,.55);margin-top:28px}
+
+/* ═══════════════════════════════════════════════
+   FOOTER — synced with homepage-v4
+═══════════════════════════════════════════════ */
+footer{background:var(--ink);padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--body);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;padding:64px 20px 72px}
+  .hero-overlay{background:linear-gradient(160deg,rgba(92,16,100,.97) 0%,rgba(92,16,100,.92) 55%,rgba(60,28,68,.76) 100%)}
+  .problem-grid{grid-template-columns:1fr;gap:48px}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .about-photo{max-width:340px;margin:0 auto}
+  .learn-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:40px}
+}
+@media(max-width:680px){
+  section{padding:70px 0}
+  .hero h1{font-size:30px}
+  .learn-grid{grid-template-columns:1fr}
+  .t-grid{grid-template-columns:1fr}
+  .t-solo{max-width:100%}
+  .quote-band .wrap{grid-template-columns:1fr;gap:14px}
+  .quote-band blockquote{border-left:0;padding-left:0}
+  .reg-when{flex-direction:column;gap:14px}
+  .btn{width:100%;padding:17px 24px}
+  .sec-head h2{font-size:22px}
+  .lb{padding:64px 14px 44px}
+  .lb-nav{width:42px;height:42px}
+  .lb-prev{left:8px}
+  .lb-next{right:8px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ ATTENTION BAR ════════════════════════════ -->
+<!-- [EDIT] The pain question that qualifies the visitor -->
+<div class="attn-bar">
+  <div class="wrap">
+    <p>Does building your list feel like a lot of work without the results?</p>
+  </div>
+</div>
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="https://elydelaney.com" class="nav-logo">
+      <img src="ElyLogoWhite2026.png" alt="Ely Delaney, Email Marketing Strategist">
+    </a>
+    <a href="#register" class="nav-cta">Save My Spot</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ═════════════════════════════════════ -->
+<header class="hero" id="register">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+
+    <!-- Left column -->
+    <div>
+      <!-- [EDIT] Eyebrow -->
+      <div class="hero-eyebrow">Free Live Training &middot; Limited Seats</div>
+
+      <!-- [EDIT] Headline. Keep exactly one <em> phrase. -->
+      <h1>Turn casual connections into <em>clients for life</em></h1>
+
+      <span class="hero-paren">The three components that keep prospects engaged long after the first hello.</span>
+
+      <p class="hero-body">
+        You have spent a ton of time getting out there and building your brand. Networking. Speaking to groups.
+        Posting daily. Getting on podcasts. Running ads. The list keeps going.
+        <strong>And the return in clients never showed up.</strong>
+      </p>
+
+      <p class="hero-body">
+        It is a lot of work with very little conversion. This training fixes the part everyone skips.
+      </p>
+    </div>
+
+    <!-- Right column: registration card -->
+    <div>
+      <div class="reg">
+        <div class="label">Reserve Your Spot</div>
+        <!-- [EDIT] Webinar title -->
+        <h2>[Webinar Title Goes Here]</h2>
+        <p class="sub">Get them interested. Get them engaged. And get them to stick around for life.</p>
+
+        <!-- [EDIT] Date and time -->
+        <div class="reg-when">
+          <div>
+            <span>Date</span>
+            <strong>Tuesday, July 28th</strong>
+          </div>
+          <div>
+            <span>Time</span>
+            <strong>1:00pm Central</strong>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             REGISTRATION FORM
+             Fields match the High Level form:
+               1. First Name
+               2. Primary Email
+               3. What's Your Biggest Frustration With
+                  Following Up With Your Leads?  (textarea)
+               Button: Yes! Save My Spot!
+
+             When the High Level embed is ready, swap this
+             whole <form> block for the embed code. Keep the
+             .reg wrapper so the card styling still applies.
+        ═══════════════════════════════════════════════════ -->
+        <form action="#" method="post">
+          <input type="text"  name="first_name" placeholder="First Name" required>
+          <input type="email" name="email"      placeholder="Primary Email" required>
+          <textarea name="frustration" rows="4"
+                    placeholder="What's Your Biggest Frustration With Following Up With Your Leads?"></textarea>
+          <button type="submit" class="btn btn-dark">Yes! Save My Spot!</button>
+        </form>
+
+        <p class="note">No pitch fest. No replay guarantee. Show up live.</p>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ══ TESTIMONIAL BAND 1 ═══════════════════════ -->
+<div class="quote-band">
+  <div class="wrap">
+    <div class="quote-mark">&ldquo;</div>
+    <blockquote>
+      <p>Before I started working with Ely on systems and automation, I was a little confused on what the best steps
+         would be to help with conversion. Frustrated with all of the efforts that had put out that were not converting.</p>
+      <p>Now that I am using Ely's system and processes, I find that it's super simple to use my resources to do things
+         that increase revenue. For anyone else considering working with Ely, if you want more time and more money
+         while you're sleeping, then you should definitely look at hiring Ely.</p>
+      <cite>Shannon Procise</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ══ PROBLEM ══════════════════════════════════ -->
+<section class="problem">
+  <div class="wrap">
+    <div class="problem-grid">
+
+      <div>
+        <div class="eyebrow">Have you heard this one?</div>
+        <h2>You're just one&hellip;</h2>
+        <div class="rule"></div>
+
+        <!-- [EDIT] The "one X away" list -->
+        <ul class="away-list">
+          <li>Funnel away</li>
+          <li>Stage away</li>
+          <li>Podcast away</li>
+          <li>Sponsorship away</li>
+          <li>Membership away</li>
+          <li>Mastermind away</li>
+          <li>etc&hellip; etc&hellip; etc&hellip;</li>
+        </ul>
+
+        <div class="problem-copy">
+          <p>Getting in front of leads matters. No question there. But it is starting to sound like a pipe dream.</p>
+          <p class="punch">What you do with those leads is where things actually move the needle.</p>
+        </div>
+      </div>
+
+      <div class="problem-photo">
+        <!-- [EDIT] Swap for the new photo. Style guide calls for real settings, not stock. -->
+        <img src="Home_Background.png" alt="Ely Delaney speaking to a room of business owners">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT YOU'LL LEARN ════════════════════════ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we'll cover <em>together</em></h2>
+      <div class="rule"></div>
+      <p>Three critical components &middot; One hour</p>
+    </div>
+
+    <!-- [EDIT] Three teaching points -->
+    <div class="learn-grid">
+
+      <div class="learn-item">
+        <div class="learn-num">01</div>
+        <h3>Get them interested</h3>
+        <div class="divider"></div>
+        <p>Why most lead magnets collect names and nothing else, and what to offer instead so the right people
+           raise their hand.</p>
+      </div>
+
+      <div class="learn-item">
+        <div class="learn-num">02</div>
+        <h3>Get them engaged</h3>
+        <div class="divider"></div>
+        <p>The follow up rhythm that keeps you top of mind without feeling pushy, salesy, or desperate.</p>
+      </div>
+
+      <div class="learn-item">
+        <div class="learn-num">03</div>
+        <h3>Get them to stick around</h3>
+        <div class="divider"></div>
+        <p>How to build a system once that keeps working for years, so prospects buy when they are ready
+           instead of when you push.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ MID CTA BAND ═════════════════════════════ -->
+<div class="band">
+  <div class="band-bg"></div>
+  <div class="band-overlay"></div>
+  <div class="band-inner">
+    <h2>Systems that work day after day</h2>
+    <div class="rule"></div>
+    <p>RSVP today and I'll show you how we help clients build systems that keep prospects engaged
+       and listening to their every word.</p>
+    <a href="#register" class="btn btn-white btn-lg">Yes! Save My Spot!</a>
+  </div>
+</div>
+
+<!-- ══ TESTIMONIAL BAND 2 ═══════════════════════ -->
+<div class="quote-band">
+  <div class="wrap">
+    <div class="quote-mark">&ldquo;</div>
+    <blockquote>
+      <p>Before I came to you, I was all over the place. I'm really unorganized, and I knew this.</p>
+      <p>So anytime I could find a client, I was kind of grasping onto them, but it was with no real solid plan
+         or organization, and I knew I really needed the organization. So with you, I have been very organized,
+         and there's not one day that I don't know what I am supposed to be doing that day.</p>
+      <cite>Alicia Jones</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ══ TESTIMONIALS ═════════════════════════════ -->
+<section class="mist">
+  <div class="wrap-wide">
+    <div class="sec-head">
+      <h2>Real results from <em>real professionals</em></h2>
+      <div class="rule"></div>
+      <p>What people are saying</p>
+    </div>
+
+    <p class="t-hint">
+      <span>
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg>
+        Click any testimonial to read it full size
+      </span>
+    </p>
+
+    <div class="t-grid" id="tGrid">
+      <div class="t-item" data-src="Testimonials/MichaelBuzinski.jpg" data-alt="Testimonial from Michael Buzinski">
+        <img src="Testimonials/MichaelBuzinski.jpg" alt="Testimonial from Michael Buzinski">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/NilsVinje.jpg" data-alt="Testimonial from Nils Vinje">
+        <img src="Testimonials/NilsVinje.jpg" alt="Testimonial from Nils Vinje">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/LeeStringham.jpg" data-alt="Testimonial from Lee Stringham">
+        <img src="Testimonials/LeeStringham.jpg" alt="Testimonial from Lee Stringham">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/LoriHoward.jpeg" data-alt="Testimonial from Lori Howard">
+        <img src="Testimonials/LoriHoward.jpeg" alt="Testimonial from Lori Howard">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/JeffLoyd.jpg" data-alt="Testimonial from Jeff Loyd">
+        <img src="Testimonials/JeffLoyd.jpg" alt="Testimonial from Jeff Loyd">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item" data-src="Testimonials/MikeAirheart.jpg" data-alt="Testimonial from Mike Airhart">
+        <img src="Testimonials/MikeAirheart.jpg" alt="Testimonial from Mike Airhart">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+      <div class="t-item t-solo" data-src="Testimonials/DustinHelms.jpg" data-alt="Testimonial from Dustin Helms">
+        <img src="Testimonials/DustinHelms.jpg" alt="Testimonial from Dustin Helms">
+        <span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11h5"/></svg></span>
+      </div>
+    </div>
+
+    <p class="t-note">Click any testimonial to read it full size</p>
+  </div>
+</section>
+
+<!-- ══ LIGHTBOX ═════════════════════════════════ -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Testimonial viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <p class="lb-count" id="lbCount"></p>
+</div>
+
+<!-- ══ ABOUT ELY ════════════════════════════════ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-left">
+        <h2>The Follow Up Rockstar.<br><em>The People Whisperer.</em></h2>
+        <div class="rule"></div>
+        <p>Ely Delaney is an email marketing strategist, ghostwriter, speaker, and author. He helps professional service providers build done for you automated follow up systems that keep working long after the conversation ends.</p>
+        <p>He started in web design in 1995. He pivoted to relationship marketing. He built campaigns that are still running a decade later. He speaks to thousands of professionals every year about the one thing most of them get wrong.</p>
+        <p><strong>The money is in the relationship with the list.</strong></p>
+        <div class="about-btns">
+          <a href="#register" class="btn btn-primary">Yes! Save My Spot!</a>
+          <a href="https://followuprockstar.com/call" class="btn btn-ghost">Book A Call</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="ElyDelaney01_clear.png" alt="Ely Delaney, The Follow Up Rockstar">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING CTA ══════════════════════════════ -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Save your spot <em>before it's gone</em></h2>
+    <div class="rule"></div>
+    <p>One hour. Three components. A follow up system that keeps working long after the training ends.</p>
+    <a href="#register" class="btn btn-white btn-lg">Yes! Save My Spot!</a>
+    <!-- [EDIT] Date and time -->
+    <p class="when">Tuesday, July 28th &middot; 1:00pm Central</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+
+      <!-- Brand column -->
+      <div class="foot-brand">
+        <img src="ElyLogoWhite2026.png" alt="Ely Delaney, Email Marketing Strategist">
+
+        <div class="socials">
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+        </div>
+
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="https://elydelaney.com/terms-and-conditions">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal column -->
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Copyright year, updates itself ──────── */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── Testimonial lightbox ────────────────── */
+(function(){
+  var items   = Array.prototype.slice.call(document.querySelectorAll('.t-item'));
+  var lb      = document.getElementById('lightbox');
+  var lbImg   = document.getElementById('lbImg');
+  var lbCount = document.getElementById('lbCount');
+  var current = 0;
+  var lastFocus = null;
+
+  function show(i){
+    current = (i + items.length) % items.length;
+    var el = items[current];
+    lbImg.src = el.getAttribute('data-src');
+    lbImg.alt = el.getAttribute('data-alt') || '';
+    lbCount.textContent = (current + 1) + ' of ' + items.length;
+  }
+
+  function open(i){
+    lastFocus = document.activeElement;
+    show(i);
+    lb.classList.add('open');
+    document.body.classList.add('locked');
+    document.getElementById('lbClose').focus();
+  }
+
+  function close(){
+    lb.classList.remove('open');
+    document.body.classList.remove('locked');
+    lbImg.src = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  items.forEach(function(el, i){
+    el.setAttribute('tabindex','0');
+    el.setAttribute('role','button');
+    el.addEventListener('click', function(){ open(i); });
+    el.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+    });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function(){ show(current - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ show(current + 1); });
+
+  lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
+
+</body>
+</html>

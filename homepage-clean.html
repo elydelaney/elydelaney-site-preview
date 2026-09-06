@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ely Delaney – Clean Version Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple:       #5b21b6;
+      --purple-mid:   #7c3aed;
+      --purple-light: #a78bfa;
+      --amber:        #d97706;
+      --amber-light:  #f59e0b;
+      --cream:        #faf7f2;
+      --cream-2:      #f0ebe3;
+      --cream-3:      #e5ddd3;
+      --dark:         #0f0a1e;
+      --dark-2:       #1a1232;
+      --text-dark:    #1a1232;
+      --text-body:    #4a4560;
+      --text-muted:   #8a84a0;
+      --white:        #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    /* ══ NAV ══════════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 56px;
+      height: 68px;
+      background: rgba(250,247,242,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--cream-3);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--purple-mid); }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-body);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--purple-mid); }
+    .nav-cta {
+      background: var(--purple-mid);
+      color: #fff !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+    }
+    .nav-cta:hover { background: var(--purple) !important; color: #fff !important; }
+
+    /* ══ HERO ═════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 68px;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px 80px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle gear watermark inside dark hero-left */
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 360px; height: 360px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%237c3aed' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber-light);
+      margin-bottom: 22px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--purple-light);
+    }
+    .hero-paren {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #8a84a0;
+      margin-top: 14px;
+      font-style: normal;
+    }
+
+    .hero-body {
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: #a8a0c0;
+      margin: 26px 0 36px;
+      max-width: 420px;
+    }
+
+    /* form */
+    .hero-form-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #6b6585;
+      margin-bottom: 12px;
+    }
+    .hero-form { display: flex; flex-direction: column; gap: 10px; max-width: 380px; }
+    .hero-form input {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 7px;
+      padding: 13px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .hero-form input::placeholder { color: #4a4465; }
+    .hero-form input:focus { border-color: var(--purple-light); }
+    .btn-amber {
+      background: var(--amber);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 7px;
+      padding: 15px 24px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-amber:hover { background: #b45309; transform: translateY(-1px); }
+    .hero-form-note {
+      font-size: 0.7rem;
+      color: #4a4465;
+      margin-top: 4px;
+    }
+
+    /* hero right = full bleed photo */
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    /* amber accent bar on left edge of photo */
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 5px; height: 100%;
+      background: var(--amber);
+      z-index: 2;
+    }
+
+    /* ══ AMBER DIVIDER BAR ════════════════════════════ */
+    .divider-bar {
+      background: var(--amber);
+      padding: 18px 56px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      overflow-x: auto;
+    }
+    .divider-bar span {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #fff;
+      white-space: nowrap;
+      opacity: 0.85;
+    }
+    .divider-bar .sep { opacity: 0.4; font-size: 1.2rem; }
+
+    /* ══ PULL QUOTE BAND ══════════════════════════════ */
+    .pull-quote {
+      background: var(--cream-2);
+      padding: 80px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pull-quote::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 6px; height: 100%;
+      background: var(--purple-mid);
+    }
+    /* gear watermark */
+    .pull-quote::after {
+      content: '';
+      position: absolute; bottom: -60px; right: -60px;
+      width: 300px; height: 300px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%235b21b6' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: 0.05; pointer-events: none;
+    }
+    .pull-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-dark);
+      max-width: 900px;
+    }
+    .pull-quote blockquote em {
+      font-style: italic;
+      color: var(--purple-mid);
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* ══ PROBLEM SECTION ══════════════════════════════ */
+    .problem-section {
+      background: var(--white);
+      padding: 100px 0;
+    }
+    .section-inner { max-width: 1120px; margin: 0 auto; padding: 0 56px; }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; color: var(--purple-mid); }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .problem-left p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 18px;
+    }
+    .problem-left p strong { color: var(--text-dark); }
+
+    .stat-stack { display: flex; flex-direction: column; gap: 20px; }
+    .stat-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px;
+      background: var(--cream);
+      border-radius: 10px;
+      border-left: 4px solid var(--amber);
+    }
+    .stat-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--purple-mid);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 80px;
+    }
+    .stat-item p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-body);
+      margin-top: 4px;
+    }
+
+    /* ══ PHOTO BAND (full-width stage photo) ══════════ */
+    .photo-band {
+      position: relative;
+      height: 420px;
+      overflow: hidden;
+    }
+    .photo-band img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .photo-band-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(15,10,30,0.82) 0%, rgba(15,10,30,0.3) 55%, transparent 100%);
+    }
+    .photo-band-text {
+      position: absolute;
+      top: 50%; left: 56px;
+      transform: translateY(-50%);
+      max-width: 560px;
+    }
+    .photo-band-text p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #fff;
+    }
+    .photo-band-text p em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+    .photo-band-text .attr {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+
+    /* ══ HOW WE HELP ══════════════════════════════════ */
+    .help-section {
+      background: var(--cream);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* gear watermark */
+    .help-section::after {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 400px; height: 400px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%235b21b6' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: 0.045; pointer-events: none;
+    }
+    /* small gear bottom-left */
+    .help-section::before {
+      content: '';
+      position: absolute; bottom: -30px; left: 60px;
+      width: 180px; height: 180px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%235b21b6' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: 0.04; pointer-events: none;
+    }
+
+    .help-cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .help-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 36px 30px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .help-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(91,33,182,0.1); }
+    .help-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--amber);
+    }
+    .help-card:nth-child(2)::before { background: var(--purple-mid); }
+    .help-card:nth-child(3)::before { background: var(--purple-light); }
+
+    .help-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--cream-3);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .help-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .help-card p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      margin-bottom: 20px;
+    }
+    .card-link {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      text-decoration: none;
+    }
+    .card-link:hover { color: var(--purple); }
+
+    /* ══ BOOK SECTION ═════════════════════════════════ */
+    .book-section {
+      background: var(--dark);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .book-section::after {
+      content: '';
+      position: absolute; bottom: -80px; right: 80px;
+      width: 340px; height: 340px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%237c3aed' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: 0.06; pointer-events: none;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .book-cover {
+      background: linear-gradient(160deg, #2d1b69 0%, #1a0a3e 100%);
+      border-radius: 6px 12px 12px 6px;
+      aspect-ratio: 2/3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: -8px 8px 40px rgba(0,0,0,0.6), 4px 0 0 rgba(255,255,255,0.05) inset;
+      border-left: 6px solid var(--amber);
+    }
+    .book-cover .btitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .book-cover .bsub {
+      font-size: 0.72rem;
+      color: var(--purple-light);
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+    }
+    .book-cover .bauthor {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .book-right .section-title { color: #fff; }
+    .book-right p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #a8a0c0;
+      margin-bottom: 16px;
+    }
+    .virtue-wrap { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0; }
+    .virtue-pill {
+      background: rgba(124,58,237,0.18);
+      border: 1px solid rgba(167,139,250,0.3);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+    }
+    .btn-outline-amber {
+      display: inline-block;
+      border: 2px solid var(--amber);
+      color: var(--amber);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline-amber:hover { background: var(--amber); color: #fff; }
+
+    /* ══ TESTIMONIALS ═════════════════════════════════ */
+    .testimonials-section {
+      background: var(--white);
+      padding: 100px 0;
+    }
+    .t-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .t-card {
+      padding: 32px 28px;
+      background: var(--cream);
+      border-radius: 12px;
+      border-bottom: 3px solid var(--amber);
+      position: relative;
+    }
+    .t-card::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--purple-mid);
+      opacity: 0.15;
+      position: absolute;
+      top: 8px; left: 16px;
+      line-height: 1;
+    }
+    .t-card p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text-body);
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .t-author strong {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .t-author span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ══ ABOUT ════════════════════════════════════════ */
+    .about-section {
+      background: var(--cream-2);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* gear watermark */
+    .about-section::before {
+      content: '';
+      position: absolute; top: -40px; left: -40px;
+      width: 280px; height: 280px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%235b21b6' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: 0.05; pointer-events: none;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-left .section-title { margin-bottom: 22px; }
+    .about-left p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 16px;
+    }
+    .about-left strong { color: var(--text-dark); }
+    .about-cta { margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-purple {
+      display: inline-block;
+      background: var(--purple-mid);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-purple:hover { background: var(--purple); }
+    .btn-ghost {
+      display: inline-block;
+      border: 2px solid var(--text-dark);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 11px 28px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { background: var(--text-dark); color: #fff; }
+
+    .about-photo {
+      position: relative;
+    }
+    .about-photo img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    .about-photo-placeholder {
+      background: var(--cream-3);
+      border-radius: 12px;
+      aspect-ratio: 4/5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+    }
+    .about-photo-placeholder svg { width: 56px; height: 56px; margin-bottom: 12px; opacity: 0.4; }
+    .about-photo-placeholder p { font-size: 0.8rem; opacity: 0.5; }
+    /* amber corner accent */
+    .about-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 80px; height: 80px;
+      border-right: 4px solid var(--amber);
+      border-bottom: 4px solid var(--amber);
+      border-radius: 0 0 4px 0;
+    }
+
+    /* ══ FAQ ══════════════════════════════════════════ */
+    .faq-section {
+      background: var(--white);
+      padding: 100px 0;
+    }
+    .faq-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .faq-item {
+      padding: 28px 32px;
+      background: var(--cream);
+      border-radius: 10px;
+      border-left: 3px solid var(--purple-light);
+    }
+    .faq-q {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .faq-a {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text-body);
+    }
+
+    /* ══ FOOTER CTA ═══════════════════════════════════ */
+    .footer-cta {
+      background: var(--dark);
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-cta::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--amber) 0%, var(--purple-mid) 50%, var(--amber) 100%);
+    }
+    .footer-cta::after {
+      content: '';
+      position: absolute; bottom: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%237c3aed' d='M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: 0.05; pointer-events: none;
+    }
+    .footer-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-cta h2 em { font-style: italic; color: var(--amber-light); }
+    .footer-cta p {
+      font-size: 1rem;
+      color: #8a84a0;
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* ══ FOOTER ═══════════════════════════════════════ */
+    footer {
+      background: #070412;
+      padding: 28px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    footer p, footer a { font-size: 0.76rem; color: #3a344e; text-decoration: none; }
+    footer a:hover { color: var(--purple-light); }
+
+    /* ══ RESPONSIVE ═══════════════════════════════════ */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { height: 340px; }
+      .hero-right::before { display: none; }
+      .hero-left { padding: 60px 28px; }
+      .problem-grid, .book-grid, .about-grid, .faq-cols { grid-template-columns: 1fr; }
+      .help-cards, .t-grid { grid-template-columns: 1fr; }
+      .section-inner { padding: 0 28px; }
+      .photo-band-text { left: 28px; max-width: 85%; }
+      .divider-bar { padding: 16px 28px; }
+      .about-photo::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Ely <span>Delaney</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Book</a></li>
+    <li><a href="#">Programs</a></li>
+    <li><a href="#">Speaking</a></li>
+    <li><a href="#">Work With Ely</a></li>
+    <li><a href="#">Articles</a></li>
+    <li><a href="#" class="nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO: dark left panel + full-bleed photo right -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">The Follow-Up Fix &nbsp;·&nbsp; Free 5-Day Email Series</div>
+    <h1 class="hero-headline">
+      Escape the<br>
+      '3 Touches and Done'<br>
+      <em>Trap</em>
+      <span class="hero-paren">(Without Becoming an Annoying Pest)</span>
+    </h1>
+    <p class="hero-body">
+      In this free email series, you'll discover the relationship-building approach
+      that turns one-time prospects into lifetime referral sources — without
+      constant pitching or aggressive sales tactics.
+    </p>
+    <p class="hero-form-label">Get Instant Access — It's Free</p>
+    <form class="hero-form" action="#" method="post">
+      <input type="text"  name="first_name" placeholder="First Name" required/>
+      <input type="email" name="email"      placeholder="Email Address" required/>
+      <button type="submit" class="btn-amber">Send Me the Free Series →</button>
+    </form>
+    <p class="hero-form-note">No spam. Unsubscribe anytime.</p>
+  </div>
+  <div class="hero-right">
+    <img src="Home_Background.png" alt="Ely Delaney on stage"/>
+  </div>
+</section>
+
+<!-- AMBER DIVIDER BAR -->
+<div class="divider-bar">
+  <span>SCORE</span><span class="sep">·</span>
+  <span>NSBA</span><span class="sep">·</span>
+  <span>BNI</span><span class="sep">·</span>
+  <span>Toastmasters</span><span class="sep">·</span>
+  <span>NAWBO</span><span class="sep">·</span>
+  <span>Chambers of Commerce</span><span class="sep">·</span>
+  <span>Author · Speaker · Strategist</span>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>
+    "Most people follow up once or twice.<br>
+    Then they quit. <em>That's where the money dies.</em>"
+  </blockquote>
+  <cite>— Ely Delaney, The Follow Up Rockstar</cite>
+</div>
+
+<!-- PROBLEM / PROMISE -->
+<section class="problem-section">
+  <div class="section-inner">
+    <span class="section-tag">The Problem With How Most People Follow Up</span>
+    <h2 class="section-title">
+      Your prospects are still out there.<br>
+      <em>They just stopped hearing from you.</em>
+    </h2>
+    <div class="problem-grid">
+      <div class="problem-left">
+        <p>Most professionals follow up two or three times. Then they give up. They tell themselves the prospect wasn't ready. <strong>But the prospect is still out there. Still looking. Just waiting for the right moment.</strong></p>
+        <p>That moment comes for someone. It just doesn't come for you — because you stopped showing up.</p>
+        <p>I built my business on one idea: the money is not in the list. It's in the relationship with the list. An automated follow up system lets you stay in that relationship — without chasing, without pressure, and without spending every day manually reaching out.</p>
+        <p><strong>It keeps working long after the conversation ends.</strong></p>
+      </div>
+      <div class="stat-stack">
+        <div class="stat-item">
+          <div class="num">80%</div>
+          <p>of sales require 5 or more follow up touches. Most people quit after 2.</p>
+        </div>
+        <div class="stat-item">
+          <div class="num">10 yrs</div>
+          <p>The length of one email relationship that turned into a referral. Real story. Real result.</p>
+        </div>
+        <div class="stat-item">
+          <div class="num">24 mo.</div>
+          <p>How long the Ultimate Follow Up System keeps running — automatically — once it's built.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BAND (full-width stage photo with overlay quote) -->
+<div class="photo-band">
+  <img src="Home_Background.png" alt="Ely Delaney speaking"/>
+  <div class="photo-band-overlay"></div>
+  <div class="photo-band-text">
+    <p>"He keeps it practical.<br><em>He keeps it real.</em><br>And he keeps it working."</p>
+    <p class="attr">— Event Attendee</p>
+  </div>
+</div>
+
+<!-- HOW WE HELP -->
+<section class="help-section">
+  <div class="section-inner">
+    <span class="section-tag">How We Work Together</span>
+    <h2 class="section-title">Three ways to build<br>a system that <em>lasts.</em></h2>
+    <div class="help-cards">
+      <div class="help-card">
+        <div class="help-num">01</div>
+        <h3>Speaking</h3>
+        <p>Ely speaks to business groups, associations, and corporate teams on follow up strategy, relationship marketing, and building trust through email. Practical, story-driven, immediately actionable.</p>
+        <a href="#" class="card-link">Book Ely to Speak →</a>
+      </div>
+      <div class="help-card">
+        <div class="help-num">02</div>
+        <h3>Follow Up Systems</h3>
+        <p>Done-for-you automated email campaigns built around your voice and your clients. From the "Follow Up Jumpstart" to the full 24-month Ultimate Follow Up System — we build it, you run it.</p>
+        <a href="#" class="card-link">See How It Works →</a>
+      </div>
+      <div class="help-card">
+        <div class="help-num">03</div>
+        <h3>Programs</h3>
+        <p>Self-paced courses for professionals who want to build their own systems — including the DIY Ultimate Follow Up System course and Podcasting for Fun and Profit.</p>
+        <a href="#" class="card-link">View Programs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book-section">
+  <div class="section-inner">
+    <div class="book-grid">
+      <div class="book-cover">
+        <div class="btitle">The Follow Up Code</div>
+        <div class="bsub">Seven Virtues for Building<br>Trust Through Email</div>
+        <div class="bauthor">Ely Delaney</div>
+      </div>
+      <div class="book-right">
+        <span class="section-tag" style="color:var(--amber-light);">The Book</span>
+        <h2 class="section-title" style="color:#fff;">The Follow Up Code</h2>
+        <p>Built around the seven virtues of Bushido, <em style="color:var(--purple-light);">The Follow Up Code</em> is a practical guide to building real trust through email — the kind that turns prospects into clients and clients into advocates.</p>
+        <p>This is not a book about tactics. It's about the philosophy behind why some follow up works and most of it doesn't.</p>
+        <div class="virtue-wrap">
+          <span class="virtue-pill">Rectitude</span>
+          <span class="virtue-pill">Courage</span>
+          <span class="virtue-pill">Benevolence</span>
+          <span class="virtue-pill">Respect</span>
+          <span class="virtue-pill">Honesty</span>
+          <span class="virtue-pill">Honor</span>
+          <span class="virtue-pill">Loyalty</span>
+        </div>
+        <a href="https://amzn.to/4c4exEM" target="_blank" class="btn-outline-amber">Get the Book on Amazon →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-inner">
+    <span class="section-tag">What People Are Saying</span>
+    <h2 class="section-title">Real results from<br><em>real professionals.</em></h2>
+    <div class="t-grid">
+      <div class="t-card">
+        <p>"We had more responses in the first 60 days than we had in the previous four years combined. The system just works."</p>
+        <div class="t-author">
+          <strong>[Client Name]</strong>
+          <span>Business Consultant</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <p>"I hired Ely specifically because I watched him consistently show up and help people over a decade. I never felt sold to — I felt cared for."</p>
+        <div class="t-author">
+          <strong>[Client Name]</strong>
+          <span>Chamber Member</span>
+        </div>
+      </div>
+      <div class="t-card">
+        <p>"Ely built a campaign for us in 2013. It is still running today. That's not marketing — that's infrastructure."</p>
+        <div class="t-author">
+          <strong>[Client Name]</strong>
+          <span>Executive Coach</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-left">
+        <span class="section-tag">About Ely</span>
+        <h2 class="section-title">The Follow Up Rockstar.<br><em>The People Whisperer.</em></h2>
+        <p>Ely Delaney is an email marketing strategist, ghostwriter, speaker, and author. He helps professional service providers build done-for-you automated follow up systems that keep working long after the conversation ends.</p>
+        <p>He started in web design in 1995. He pivoted to relationship marketing. He built campaigns that are still running a decade later. He speaks to thousands of professionals every year about the one thing most of them are getting wrong.</p>
+        <p><strong>The money is in the relationship with the list.</strong></p>
+        <div class="about-cta">
+          <a href="https://followuprockstar.com/call" class="btn-purple">Book a Call</a>
+          <a href="#" class="btn-ghost">See Speaking Topics</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="ElyDelaney_1400x1400_Transparent.png" alt="Ely Delaney"
+          onerror="this.outerHTML='<div class=\'about-photo-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg><p>[ Ely photo ]</p></div>'"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <span class="section-tag">Common Questions</span>
+    <h2 class="section-title">You probably have<br><em>a few questions.</em></h2>
+    <div class="faq-cols">
+      <div class="faq-item">
+        <p class="faq-q">What do you actually do?</p>
+        <p class="faq-a">I build automated email follow up systems for professional service providers — consultants, coaches, CPAs, attorneys, financial advisors. People who have great conversations but lose the follow through. I fix that with a system that runs on its own.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How is this different from a newsletter?</p>
+        <p class="faq-a">A newsletter goes to everyone at the same time. An automated follow up system meets people where they are in the relationship and follows up based on that. It feels personal because it is designed to be personal.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do you work with people just starting out?</p>
+        <p class="faq-a">Yes. The free Follow-Up Fix email series is a great first step. If you want something done for you, the "Follow Up Jumpstart" is the right entry point.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do you do speaking engagements?</p>
+        <p class="faq-a">Absolutely. I speak to business associations, mastermind groups, chambers of commerce, and corporate teams. Head to the Speaking page to see topics and availability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="section-inner">
+    <h2>Ready to stop leaving money<br><em>on the table?</em></h2>
+    <p>Let's build a follow up system that works while you sleep — and keeps working years from now.</p>
+    <a href="https://followuprockstar.com/call" class="btn-amber" style="display:inline-block; text-decoration:none; padding:16px 40px; font-size:0.9rem; font-family:Inter,sans-serif; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; border-radius:7px;">Book a Free Strategy Call →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Ely Delaney · Your Marketing University · All Rights Reserved</p>
+  <p>
+    <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="#">Terms</a> &nbsp;·&nbsp;
+    <a href="https://followuprockstar.com/call">Book a Call</a>
+  </p>
+</footer>
+
+</body>
+</html>

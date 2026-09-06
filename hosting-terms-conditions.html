@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney &middot; Hosting Terms &amp; Conditions</title>
+<meta name="description" content="Hosting Terms &amp; Conditions for Purple Knight Marketing and Ely Delaney.">
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#5C1064;
+  --purple-deep:#3C1C44;
+  --ink:#330B33;
+  --purple-mid:#944C9C;
+  --orchid:#BC64C4;
+  --slate-plum:#6B5464;
+  --gray:#949C9C;
+  --lavender:#E4DCE4;
+  --mist:#F5F2F6;
+  --white:#fff;
+
+  --display:'Archivo',Tahoma,sans-serif;
+  --body:'Inter',Tahoma,sans-serif;
+
+  --container:1170px;
+  --nav-h:70px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+.btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--lavender)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* LEGAL SUBNAV */
+.legal-subnav{background:var(--mist);border-bottom:1px solid var(--lavender);margin-top:var(--nav-h)}
+.legal-subnav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px}
+.legal-subnav a{display:inline-block;padding:13px 14px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.7px;
+                 text-transform:uppercase;color:var(--slate-plum);text-decoration:none;border-bottom:2px solid transparent;
+                 white-space:nowrap;transition:.15s}
+.legal-subnav a:hover{color:var(--purple)}
+.legal-subnav a.on{color:var(--purple);border-bottom-color:var(--purple)}
+
+/* LEGAL HERO + BODY */
+.legal-hero{background:var(--purple-deep);padding:50px 0 40px;text-align:center}
+.legal-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,32px);line-height:1.25;letter-spacing:-.3px;color:#fff;max-width:760px;margin:0 auto}
+
+.legal-body{padding:60px 0 100px}
+.legal-content{max-width:760px;margin:0 auto}
+.legal-content p{font-size:14.5px;line-height:1.85;margin-bottom:18px;color:var(--slate-plum)}
+.legal-content h3{font-family:var(--display);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.3px;color:var(--ink);margin:32px 0 14px}
+.legal-content h3:first-child{margin-top:0}
+.legal-content ul{margin:0 0 18px 20px}
+.legal-content li{font-size:14.5px;line-height:1.8;margin-bottom:8px;color:var(--slate-plum)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--body);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="hostingterms">
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="legal-subnav">
+  <div class="wrap">
+      <a href="terms-and-conditions.html">Terms and Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="amazon-affiliate-disclaimer.html">Amazon Affiliate Disclaimer</a>
+      <a href="anti-spam-policy.html">Anti-Spam Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="digital-millennium-copyright-act-notice.html">Digital Millennium Copyright</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="program-terms-and-conditions.html">Program Terms and Conditions</a>
+      <a href="hosting-terms-conditions.html" class="on">Hosting Terms &amp; Conditions</a>
+      <a href="retainertos.html">Retainer Terms &amp; Conditions</a>
+      <a href="affiliate-agreement.html">Affiliate Agreement</a>
+  </div>
+</div>
+
+<header class="legal-hero">
+  <div class="wrap">
+    <h1>Hosting Terms &amp; Conditions</h1>
+  </div>
+</header>
+
+<div class="legal-body">
+  <div class="wrap">
+    <div class="legal-content">
+      <h3>Hosting Terms &amp; Conditions of Service</h3>
+      <p>The following terms and conditions (referred collectively herein as &rdquo;Terms&rdquo; and &rdquo;Services and Products&rdquo;) described on the Hosting Order Form &rdquo;Service Descriptions&rdquo; and defined in any of Purple Knight Marketing&rsquo;s (referred herein as &rdquo;Company&rdquo;) the Company&rsquo;s product support listing, to the customer &rdquo;Customer&rdquo; identified on the Service Descriptions. The Service Descriptions, these Terms and the attachments and any addenda hereto, executed with respect to the Services and Products, are referred to herein, collectively, as this &rdquo;Agreement&rdquo;. By submitting the online order form, Customer hereby agrees to the following:</p>
+      <p>The term of this agreement, and the provision by the Company of the services hereunder, is on a month-to-month basis and renewable on such month-to-month basis unless canceled earlier by pursuant to the express terms of this agreement. Customer agrees to pay for hosting services in advance of each monthly service term on the billing date determined by the date of submission of this form. Customer agrees to be bound by the service term selected on the online order form or via applicable promotional codes. All set-up fees and monthly service fees are non-refundable. Customer shall not be entitled to any refunds, pro-rated or otherwise, in the event of early termination of this agreement by Company according to the terms herein. Non-Payment of services may result in termination of services. Customer must submit service cancellations in writing via email or USPS mail. Such notifications must be received in the Purple Knight Marketing office at least 10 days before its next monthly billing cycle. Notices can be sent to Email: Attention Billing</p>
+      <p>[email protected], Mailed: Purple Knight Marketing Attention Billing 5908 Holiday Lane A, North Richland Hills, Texas 76180.</p>
+      <p>Company is not responsible for data integrity on equipment reclaimed for non-payment. Customer agrees to adhere to the Company&rsquo;s Acceptable Use Policy, as amended from time to time by the Company. Company reserves the right to terminate service immediately to any subscriber it deems, in its sole discretion, violates any condition of service including the Acceptable Use Policy, or Terms of Services, or for any other reason. Additionally, in consideration for hosting services to be delivered, Customer agrees to be bound to the following terms:</p>
+      <p>Indemnification: Customer agrees to indemnify and hold harmless Company and the employees and agents of Company (each an &rdquo;Indemnified Party&rdquo; against any losses, claims, damages, liabilities, penalties, actions, proceedings or judgments (collectively, &rdquo;Losses&rdquo; to which an Indemnified Party may become subject and which Losses arise out of, or relate to this Agreement or Customer&rsquo;s use of the Services and Products, and will reimburse an Indemnified Party for all legal and other expenses, including reasonable attorneys&rsquo; fees incurred by such Indemnified Party in connection with investigating, defending or settling any Loss whether or not in connection with pending or threatened litigation in which such Indemnified Party is a party. Limitation on Company Liability Company shall not be deemed to be in default of any provision of this Agreement or be liable for any failure of performance of the Services and Products to Customer resulting, directly or indirectly, from any (i) weather conditions, natural disasters or other acts of God, (ii) action of any governmental or military authority, (iii) failure caused by telecommunication or other Internet provider, or (iv) other force or occurrence beyond its control. The exclusive remedy against Company for any damages whatsoever to Customer arising out of or related to this Agreement shall be the refund of the fees paid by Customer to Company with respect to the then current term of this Agreement.</p>
+      <p>COMPANY SHALL NOT BE LIABLE FOR (i) ANY INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR ANY LOSS OF PROFITS OR LOSS OF REVENUE RESULTING FROM THE USE OF THE COMPANY&rsquo;S SERVICES AND PRODUCTS BY CUSTOMER OR ANY THIRD PARTIES, OR (ii) ANY LOSS OF DATA RESULTING FROM DELAYS, NONDELIVERIES, MISDELIVERIES OR SERVICE INTERRUPTIONS COMPANY PROVIDES THE SERVICES AND PRODUCTS AS IS, WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED COMPANY DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE CUSTOMER SHALL BE SOLELY RESPONSIBLE FOR THE SELECTION, USE AND SUITABILITY OF THE SERVICES AND PRODUCTS AND COMPANY SHALL HAVE NO LIABILITY THEREFORE.</p>
+      <p>Arbitration: ANY CONTROVERSY OR CLAIM ARISING OUT OF OR RELATING TO THIS CONTACT OR ANY BREACH THEREOF IN EXCESS OF $250.00 SHALL BE SETTLED BY ARBITRATION IN ACCORDANCE WITH THE COMMERCIAL ARBITRATION RULES OF THE AMERICAN ARBITRATION ASSOCIATION AND JUDGMENT UPON THE AWARD RENDERED BY THE ARBITRATOR MAY BE ENTERED IN ANY COURT HAVING JURISDICTION THEREOF.</p>
+      <p>Notices: Unless otherwise specified herein, any notices or other communications required or permitted hereunder shall be sufficiently given if in writing and delivered personally or sent by facsimile transmission, internationally recognized overnight courier, registered or certified mail, to the address or facsimile number of Customer as set forth in the Service Descriptions or Company as set forth below. Such notices or other communications shall be deemed received (i) on the date delivered, if delivered personally, (ii) on the date that return confirmation is received, if sent by facsimile, (iii)on the business day (or, if international, on the second business day) after being sent by an internationally recognized overnight air courier or (iv) five days after being sent, if sent by first class registered mail, return receipt requested.</p>
+      <p>Governing Law: This Agreement shall be governed by and construed in accordance with the laws of the State of Texas, without regard to choice of law provisions that would cause the application of the law of another jurisdiction.</p>
+      <p>Miscellaneous: Failure by either Company or Customer to enforce any of the provisions of this Agreement or any rights with respect hereto or the failure to exercise any option provided hereunder shall in no way be considered to be waiver of such provisions, rights or options, or to in any way affect the validity of this Agreement. If one or more of the provisions contained in this Agreement are found to be invalid, illegal or unenforceable in any respect, the validity, legality and enforceability of the remaining provisions shall not be affected. This Agreement may be executed in any number of counterparts, each of which shall be deemed an original, but all of which together shall constitute one and the same instrument.</p>
+      <p>Customer Acknowledgment: Customer acknowledges that the service provided is of such a nature that the service can be interrupted for many reasons other than the negligence of Purple Knight Marketing and that damages resulting from any interruption of service are impossible to ascertain. Therefore, customer agrees that Purple Knight Marketing shall not be liable for any damages arising from such causes beyond the direct and exclusive control of Purple Knight Marketing. Customer further acknowledges that the Purple Knight Marketing&rsquo;s liability for its own negligence may not in any event exceed an amount equivalent to charges payable by customer for services during the period damages occurred. In no event shall Purple Knight Marketing be liable for any special or consequential damages, loss or injury.</p>
+      <p>Support Boundaries: Use of Purple Knight Marketing services requires a certain level of knowledge in the use of Internet languages, protocols, and software. This level of knowledge varies depending on the anticipated use and desired content of customer&rsquo;s website.The customer is responsible for programming and for uploading the website to our servers. Website development, consulting, programming and debugging are beyond the free hosting support services. However, our web design and programming team will be happy to prepare a quote to fit your specific requirements.</p>
+      <p>The customer agrees that he or she has the necessary knowledge to maintain their hosting account and email accounts and agrees that it is not the responsibility of Purple Knight Marketing to provide this knowledge or service. Purple Knight Marketing provides technical support for services only to its customers. We limit our technical support to our area of expertise. The following is our guideline when providing support:</p>
+      <p>Purple Knight Marketing provides support related to your service plan’s features’ physical functioning. Purple Knight Marketing does not provide technical support for the customers’s customers. The only way to request technical support is to utilize the technical support helpdesk options located at http://PurpleKnightMarketing.com/support. Answers to many questions can be found in the knowledgebase section of the support website. We encourage you to check there first. Please investigate these resources before contacting the support team.</p>
+      <p>Disclosure to Law Enforcement: The TOS specifically prohibits the use of our service for illegal activities. Therefore, customer agrees that Purple Knight Marketing may disclose any and all customer information including assigned IP numbers, account history, account use, etc. to any law enforcement agency that requests such information, provided they posses the proper court-approved warrant, without consent or notification to the customer.</p>
+      <p>About Purple Knight Marketing:</p>
+      <p>Acceptable Use Policy: Purple Knight Marketing Acceptable Use Policy described below defines the actions that Purple Knight Marketing considers to be abused and strictly prohibited. There are no exclusions in this listing. Please, be aware that the actions listed below are also prohibited from other Internet Presence Providers (IPP&rsquo;s) and (ISP&rsquo;s), their users on behalf of Purple Knight Marketing to advertise any service hosted by Purple Knight Marketing or connected via the Purple Knight Marketing Network. As defined by the Federal Trade Commission Deception Policy Statement, such services are not to be advertised by way of deceptive marketing policies. For abbreviation purposes, purpleknightmarketing.com, yourmarketinguniversity.com and ktdhosting.com will be referred as Purple Knight Marketing and companies or individual account owners using our services as CUSTOMERS.</p>
+      <p>Prohibited Uses: The Internet is a global interconnection of multiple networks that physically exist in multiple counties with diverse laws, regulations, and orders (&rdquo;Laws&rdquo;. For the purposes of this AUP, terms like &rdquo;unlawful&rdquo; or &rdquo;illegal&rdquo; apply to Laws globally and within the framework of applicable governing bodies. It is Customer&rsquo;s responsibility to be aware of the Laws that apply to the use of the Service and to ensure compliance with such Laws. Purple Knight Marketing will cooperate with all court orders, subpoenas, and other similar government requests ordering Purple Knight Marketing to disclose information about use of the Service. The Service shall not be used to post, transmit, re-transmit or store material which, in the judgment of Purple Knight Marketing: Violates local, state, federal, foreign, or international Law; Could be considered threatening, obscene, indecent, defamatory, or that otherwise could adversely affect any individual, group or entity (&rdquo;Person&rdquo;) In addition to the other requirements of this AUP, the Service may be used only in a manner that in Purple Knight Marketing&rsquo;s sole discretion is consistent the purposes of such Service. Customer should contact Purple Knight Marketing if it is unsure of whether any contemplated use or action is permitted.</p>
+      <p>By way of example, and not limitation, uses described below are expressly prohibited:</p>
+      <p>General: Deceptive or fraudulent practices. Any activity infringing on the intellectual property rights of others, including, but not limited to, copyrights, trademarks, service marks, trade secrets, patents. Actions that restrict or inhibit any Person, whether a customer, Purple Knight Marketing, or otherwise, in its use or enjoyment of any Purple Knight Marketing Service. System and Network: The deliberate transmission of computer viruses worms, trojan software, or other malicious programs. Interfering with, disrupting, or denying service including, but is not limited to, using any technique to intentionally degrade or disable the delivery of any legitimate data (e.g., denial of service attacks). Attempting to gain unauthorized entry to any site or network including but not limited to executing any form of network probing, monitoring or other information-gathering on someone else&rsquo;s site or network. Attempting to circumvent host or user authentication or other security measures of any host, network or account. Maintaining an Open Email Relay/Open Data Relay or allowing any data to be sent through one&rsquo;s system by an unrelated third party, including, but is not limited to, via open email gateways and open proxy servers.</p>
+      <p>Usenet Newsgroups: Posting the same or similar messages to large numbers of Usenet newsgroup (&rdquo;Newsgroup spam&rdquo;). Posting excessive numbers of identical or similar messages to any number of Usenet newsgroups from Purple Knight Marketing&rsquo;s network or networks of other Internet Service Providers on behalf of, to advertise, any service hosted by Purple Knight Marketing, or via Purple Knight Marketing&rsquo;s network. Posting chain letters of any type. Posting encoded binary files to newsgroups not named for that purpose. Cancellation or superseding of posts other than your own. Forging of header information of the poster&rsquo;s account or service.</p>
+      <p>Mail: Sending unsolicited mail messages, including the sending of &rdquo;junk mail&rdquo; or other advertising material to individuals who did not specifically request such material, who were not previous customers or with whom the sender did not have an existing business relationship (&rdquo;E-mail spam&rdquo;). Purple Knight Marketing reserves the right to determine in its sole discretion and based on the information available (1) what constitutes spam as well as (2) what measures are necessary in response to spamming complaints. Harassment including, but not limited to, through language, frequency or size of messages. Unauthorized use, or forging, of mail header information. Solicitations of mail for any other E-mail address other than of the poster&rsquo;s account or service with the intent to harass or to collect replies. Creating or forwarding &rdquo;chain letters&rdquo; or other &rdquo;schemes&rdquo; of any type. Use of unsolicited E-mail originating from within Knight Tymes&rsquo; network or networks of other Internet Service Providers on behalf of, or to advertise any service hosted by Purple Knight Marketing, or connected via Purple Knight Marketing&rsquo;s network.</p>
+      <p>Bulk Email: Users of Purple Knight Marketing Hosting services are not allowed to send bulk email in quantities larger than 50 emails to mailing lists at any given time or more than once per week. Purple Knight Marketing is not a service that provides the ability to safely send bulk email to lists of customers or potential customers. We recommend http://ymulikes.com/infusionsoft for this type of emailing. This is a service that is specifically set up to legally and correctly accomplish bulk email. Anyone caught sending bulk email from an account hosted by Purple Knight Marketing will have their account terminated immediately and will not be allowed back on our service. This is to protect all clients from having the IP address of our service blocked by the internet SPAM detection systems, thus making it so no one can send any email to anyone. Bulk email must provide recipients with an easy and effective mechanism for removal from bulk email lists. The source of the addressee&rsquo;s address must be included in each bulk email message. Senders of bulk email must take effective steps to confirm that the actual owner of each email address on a list has agreed to receive bulk mailings from the sender before sending email to that list.</p>
+      <p>Service Resale: Service or any portion of Service will not be resold unless authorized by Purple Knight Marketing in an executed wholesale contract.</p>
+      <p>Password Protection: Customer is responsible for protecting passwords and for any authorized or unauthorized use of its systems and/or networks.</p>
+      <p>Content Protection: Customer must provide appropriate protection to prevent minors (persons under 21 years of age) from accessing any unsuitable material published via any Service.</p>
+      <p>Content Ownership: Customer is responsible for all content or information residing on, obtained or transmitted via the Service.</p>
+      <p>Vulnerable Systems: Purple Knight Marketing reserves the right, without prior notice, to perform vulnerability tests on systems residing on IP address space belonging to Purple Knight Marketing which may be allocated for Customer use. The purpose of such testing includes, but is not limited to, testing of mail servers or proxy servers for unrestricted third party relaying. Purple Knight Marketing will use commercial reasonable efforts to ensure that such testing (1)will be non-intrusive in nature, and (2)will not adversely affect Service provided to Customer or compromise the security of Customer&rsquo;s network. Customer is responsible for correcting any system vulnerability upon notification. Customer must terminate operations of a known compromised system.</p>
+      <p>Service Provided Equipment: Customer is responsible for any modification of, alteration to, or other tampering with any hardware provided with the Service. AUP Enforcement Violation of this AUP may subject Customer to international, federal, and/or state civil and/or criminal liability. Customer activity that facilitates a violation of this AUP by any party constitutes a violation of this AUP by Customer.</p>
+      <p>Purple Knight Marketing reserves the right immediately and without prior notice to filter, block, suspend, and /or terminate access to the Service at any time for any conduct that Purple Knight Marketing, in its sole discretion, determines violates or which may violate this AUP or is otherwise harmful to Purple Knight Marketing&rsquo;s interests or the interests of others. If access is terminated, Purple Knight Marketing, in its sole discretion, may refuse to accept all new e-mail sent to the terminated e-mail address and delete Customer&rsquo;s data stored on Service.</p>
+      <p>Use Of Services: The hosting charges incurred each billing cycle are for space and available functions on the Purple Knight Marketing server. The charges are not directly related to the use of those available services. Failure on the part of the customer to have an active website or use the provide email services does not constitute not needing to pay for services rendered. The space and available functions are set aside for the customer to use whether they choose to use them or not is up to them.</p>
+      <p>Late Payment/Non-Payment: Payment for hosting services is due in advance of services being provided. If the automated charge does not go through Purple Knight Marketing will make every effort to contact the customer via email to correct the issue causing the failed charge. If the account becomes 10 days past due all hosting and email services will be temporarily suspended and a $10 late feel will be applied to the open invoice.</p>
+      <p>At the 20 days past due mark a second $10 late fee will be applied to the open invoice.</p>
+      <p>At the 30 days past due mark the hosting and email services will be terminated and all files removed from the server. And all future billing will be terminated.</p>
+      <p>After an account has been terminated there will be a $150 fee to have a zip file of the customer&rsquo;s entire account sent to them via email.</p>
+      <p>If the customer wishes to reinstate their previous account with Purple Knight Marketing after said account has been terminated there will be a $150 reactivation/set up fee, any and all past due amounts and 3 months of their monthly hosting fees due in advance of the reactivation/set up.</p>
+      <p>If the account is in Suspension and the customer wishes to login and retrieve site files to move to a different hosting provider all past due invoices must be paid in full (including late fees) and an invoice in the amount of one additional month must also be paid to allow the customer time to retrieve all desired files and settings. At the end of the additional time the account will again be shut down and at that time terminated from the servers.</p>
+      <p>Purple Knight Marketing reserves the right immediately and without prior notice to filter, block, suspend, and /or terminate access to the Service at any time for any conduct that Purple Knight Marketing, in its sole discretion, determines violates or which may violate this AUP or is otherwise harmful to Purple Knight Marketing&rsquo;s interests or the interests of others. If access is terminated, Purple Knight Marketing, in its sole discretion, may refuse to accept all new e-mail sent to the terminated e-mail address and delete Customer&rsquo;s data stored on Service.</p>
+      <p>I authorize Purple Knight Marketing to charge me for the total noted on my order form, email agreement or verbal agreement. I further affirm that the contact &amp; billing information provided to Purple Knight Marketing are true, correct and current. I agree that if this contact or billing information changes, it is my responsibility to notify Purple Knight Marketing of the new information within 30 days. I further declare that I understand I am signing up for a monthly, quarterly or annual hosting service, and that my credit card will be billed on this day each month, quarter or year to pay for this service until such time as written cancellation is provided by me to Purple Knight Marketing per the information noted in this document. By pressing the ORDER button on the online payment form, or signing the physical paper form, I agree to pay Purple Knight Marketing, I also agree that I have read and understand the terms contained herein and will abide by them.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

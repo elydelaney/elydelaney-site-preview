@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney · ROI Project Sheet</title>
+<meta name="description" content="The ROI Project Sheet, from Ely Delaney's toolkit.">
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS — Visual Style Guide v1.2 (shared with homepage-v4.html)
+═══════════════════════════════════════════════ */
+:root{
+  --purple:#5C1064;
+  --purple-deep:#3C1C44;
+  --ink:#330B33;
+  --purple-mid:#944C9C;
+  --orchid:#BC64C4;
+  --slate-plum:#6B5464;
+  --gray:#949C9C;
+  --lavender:#E4DCE4;
+  --mist:#F5F2F6;
+  --white:#fff;
+
+  --display:'Archivo',Tahoma,sans-serif;
+  --body:'Inter',Tahoma,sans-serif;
+
+  --container:1170px;
+  --nav-h:70px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* ── Buttons ───────────────────────────────── */
+.btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--lavender)}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-primary:hover{background:var(--purple-mid)}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* ═══════════════════════════════════════════════
+   RESOURCE HERO + VIDEO
+═══════════════════════════════════════════════ */
+.res-hero{background:var(--purple-deep);padding:calc(var(--nav-h) + 70px) 0 60px;text-align:center}
+.res-hero .hero-eyebrow{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:2.6px;text-transform:uppercase;color:var(--lavender);margin-bottom:18px}
+.res-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.6vw,34px);line-height:1.3;letter-spacing:-.3px;color:#fff;max-width:760px;margin:0 auto}
+.res-hero h1 em{font-style:normal;color:var(--orchid)}
+.res-hero p{margin:20px auto 0;max-width:600px;font-size:14px;line-height:1.8;color:rgba(255,255,255,.65)}
+
+.res-video-wrap{padding:60px 0 100px}
+.res-video{max-width:860px;margin:0 auto;box-shadow:0 24px 60px rgba(51,11,51,.14)}
+
+.res-cta{text-align:center;margin-top:36px}
+
+.res-feedback{text-align:center;margin-top:44px;max-width:640px;margin-left:auto;margin-right:auto}
+.res-feedback p{font-family:var(--display);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);line-height:1.6;margin-bottom:22px}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{background:var(--ink);padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--body);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(max-width:620px){
+  footer{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="roisheet">
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ HERO ═════════════════════════════════════ -->
+<header class="res-hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">Ely&rsquo;s Toolkit</p>
+    <h1>ROI Project <em>Sheet</em></h1>
+    <p>This video shows a great little test I was taught by one of my first mentors, Armand Morin, many years ago, on how to decide which project you should complete first.</p>
+  </div>
+</header>
+
+<!-- ══ VIDEO ════════════════════════════════════ -->
+<div class="res-video-wrap">
+  <div class="wrap">
+    <div class="res-video">
+      <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/488253/302949da-3dda-4421-8e40-07b1fe961aea?autoplay=false&loop=false&muted=false&preload=false&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+    </div>
+    <div class="res-cta">
+      <a href="https://docs.google.com/spreadsheets/d/1mNguuAVSNNjvLLYfsdTPx3i1H1KKZRa4lNp3QF5j2-I/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">Get The ROI Sheet</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+
+      <!-- Brand column -->
+      <div class="foot-brand">
+        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal column -->
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

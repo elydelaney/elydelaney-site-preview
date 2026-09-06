@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney &middot; Terms of Use</title>
+<meta name="description" content="Terms of Use for Purple Knight Marketing and Ely Delaney.">
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#5C1064;
+  --purple-deep:#3C1C44;
+  --ink:#330B33;
+  --purple-mid:#944C9C;
+  --orchid:#BC64C4;
+  --slate-plum:#6B5464;
+  --gray:#949C9C;
+  --lavender:#E4DCE4;
+  --mist:#F5F2F6;
+  --white:#fff;
+
+  --display:'Archivo',Tahoma,sans-serif;
+  --body:'Inter',Tahoma,sans-serif;
+
+  --container:1170px;
+  --nav-h:70px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+.btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--lavender)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* LEGAL SUBNAV */
+.legal-subnav{background:var(--mist);border-bottom:1px solid var(--lavender);margin-top:var(--nav-h)}
+.legal-subnav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px}
+.legal-subnav a{display:inline-block;padding:13px 14px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.7px;
+                 text-transform:uppercase;color:var(--slate-plum);text-decoration:none;border-bottom:2px solid transparent;
+                 white-space:nowrap;transition:.15s}
+.legal-subnav a:hover{color:var(--purple)}
+.legal-subnav a.on{color:var(--purple);border-bottom-color:var(--purple)}
+
+/* LEGAL HERO + BODY */
+.legal-hero{background:var(--purple-deep);padding:50px 0 40px;text-align:center}
+.legal-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,32px);line-height:1.25;letter-spacing:-.3px;color:#fff;max-width:760px;margin:0 auto}
+
+.legal-body{padding:60px 0 100px}
+.legal-content{max-width:760px;margin:0 auto}
+.legal-content p{font-size:14.5px;line-height:1.85;margin-bottom:18px;color:var(--slate-plum)}
+.legal-content h3{font-family:var(--display);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.3px;color:var(--ink);margin:32px 0 14px}
+.legal-content h3:first-child{margin-top:0}
+.legal-content ul{margin:0 0 18px 20px}
+.legal-content li{font-size:14.5px;line-height:1.8;margin-bottom:8px;color:var(--slate-plum)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--body);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="termsofuse">
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="legal-subnav">
+  <div class="wrap">
+      <a href="terms-and-conditions.html">Terms and Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="amazon-affiliate-disclaimer.html">Amazon Affiliate Disclaimer</a>
+      <a href="anti-spam-policy.html">Anti-Spam Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="digital-millennium-copyright-act-notice.html">Digital Millennium Copyright</a>
+      <a href="terms-of-use.html" class="on">Terms of Use</a>
+      <a href="program-terms-and-conditions.html">Program Terms and Conditions</a>
+      <a href="hosting-terms-conditions.html">Hosting Terms &amp; Conditions</a>
+      <a href="retainertos.html">Retainer Terms &amp; Conditions</a>
+      <a href="affiliate-agreement.html">Affiliate Agreement</a>
+  </div>
+</div>
+
+<header class="legal-hero">
+  <div class="wrap">
+    <h1>Terms of Use</h1>
+  </div>
+</header>
+
+<div class="legal-body">
+  <div class="wrap">
+    <div class="legal-content">
+      <h3>Terms of Use Agreement</h3>
+      <p>PLEASE READ THIS WEBSITE REQUIRES CONSIDERATION FOR AND AS A CONDITION OF ALLOWING YOU ACCESS.</p>
+      <p>READING AND ACCEPTING THE TERMS OF USE AGREEMENT AND READING AND ACCEPTING THE PROVISIONS OF THE PRIVACY POLICY OF THIS WEBSITE ARE REQUIRED CONSIDERATIONS FOR THE WEBSITE GRANTING YOU THE RIGHT TO VISIT, READ, RESELL, TRANSACT, PROCESS PAYMENTS FOR OR INTERACT WITH IT IN ANY WAY. BY VISITING THIS WEBSITE YOU ARE ACKNOWLEDGING THAT ALL TERMS OF USE HAVE BEEN TRANSMITTED TO YOU. ANY AND ALL AGREEMENTS, REPRESENTATIONS, PROMISES, WARRANTIES, ACTIONS, OR STATEMENTS BY VISITOR THAT DIFFER IN ANY WAY FROM THIS AGREEMENT SHALL BE GIVEN NO FORCE OR EFFECT.</p>
+      <p>ALL PERSONS ARE DENIED ACCESS TO OR USE OF THIS SITE UNLESS THEY READ AND ACCEPT THE TERMS OF USE AND THE PRIVACY POLICY.</p>
+      <p>BY VIEWING, VISITING, USING, TRANSACTING PAYMENTS ON BEHALF OF, OR INTERACTING WITH THIS WEBSITE AS A RESELLER, INTERMEDIARY, AFFILIATE, CUSTOMER, MERCHANT SERVICE PROVIDER, PUBLISHER, ADVERTISER OR ANY INTERACTION WHATSOEVER YOU ARE AGREEING TO ALL THE PROVISIONS OF THIS TERMS OF USE POLICY AND THE PRIVACY POLICY OF THIS WEBSITE. INCLUDING ANY CHANGES TO THIS AGREEMENT OR ADDITIONAL POLICIES INCORPORATED BY REFERENCE WHICH WEBSITE MAY MAKE IN ITS SOLE DISCRETION IN THE FUTURE.</p>
+      <p>ALL PERSONS UNDER THE AGE OF 18 ARE DENIED ACCESS TO THIS WEBSITE. IF YOU ARE UNDER 18 YEARS OF AGE, IT IS UNLAWFUL FOR YOU TO VISIT, READ, OR INTERACT WITH THIS WEBSITE OR ITS CONTENTS IN ANY MANNER. THIS WEBSITE SPECIFICALLY DENIES ACCESS TO ANY INDIVIDUAL THAT IS COVERED BY THE CHILD ONLINE PRIVACY ACT (COPA) OF 1998.</p>
+      <p>THIS WEBSITE RESERVES THE RIGHT TO DENY ACCESS TO ANY PERSON OR VIEWER FOR ANY REASON. UNDER THE TERMS OF THE PRIVACY POLICY, WHICH YOU ACCEPT AS A CONDITION FOR VIEWING, THE WEBSITE IS ALLOWED TO COLLECT AND STORE DATA AND INFORMATION FOR THE PURPOSE OF EXCLUSION AND FOR MANY OTHER USES.</p>
+      <p>THE TERMS OF USE AGREEMENT MAY CHANGE FROM TIME TO TIME. VISITORS HAVE AN AFFIRMATIVE DUTY, AS PART OF THE CONSIDERATION FOR PERMISSION TO VIEW THIS WEBSITE, TO KEEP THEMSELVES INFORMED OF CHANGES.</p>
+      <h3>PARTIES TO THE TERMS OF USE AGREEMENT</h3>
+      <p>Visitors, viewers, users, subscribers, members, affiliates, resellers or customers, collectively referred to herein as “Visitors”, are parties to this agreement. The website and its predecessor websites owners and/or operators are parties to this agreement, herein referred to as “Website.” Visitors understand and acknowledge that this agreement over-rules and supersecedes any and all Visitors agreements with Website, including but not limited to Visitors own electronic website terms of use, privacy policy or other proposed legally binding agreements located on Visitors website.</p>
+      <p>Website hereby rejects all Visitors website electonic agreements including but not limited to Visitors Terms and Conditions. This agreement shall govern all parties. In the event of a dispute with Visitor the Website shall be governed by this agreement and by the applicable default rules and laws which shall be settled in binding arbitration or a court of law at the Websites choice in the jurisdiction of the Websites choice. Any and all agreements, representations, promises, warranties, actions, or statements by Visitors website or other proposed agreement that differ in any way from the terms of this agreement shall be given no force or effect. All visitors including resellers, intermediarys, affiliates, joint venture partners, publishers, advertisers, online marketers, and any and all users that visit or access this website in any way shall be subject to mutual release and any contracts or agreements are not permitted to be terminated for any cause or reason without mutual written agreement and assent of the website.</p>
+      <h3>USE OF INFORMATION FROM THIS WEBSITE</h3>
+      <p>Unless you have entered into an express written contract with this website to the contrary, visitors, viewers, subscribers, members, affiliates, or customers have no right to use this information in a commercial or public setting; they have no right to broadcast it, copy it, save it, print it, sell it, or publish any portions of the content of this website. By viewing the contents of this website you agree this condition of viewing and you acknowledge that any unauthorized use is unlawful and may subject you to civil or criminal penalties. Again, Visitor has no rights whatsoever to use the content of, or portions thereof, including its databases, invisible pages, linked pages, underlying code, or other intellectual property the site may contain, for any reason for any use whatsoever. Nothing. Visitor agrees to liquidated damages in the amount of U.S.$100,000 in addition to costs and actual damages for breach of this provision. Visitor warrants that he or she understands that accepting this provision is a condition of viewing and that viewing constitutes acceptance.</p>
+      <p>OWNERSHIP OF WEBSITE OR RIGHT TO USE, SELL, PUBLISH CONTENTS OF THIS WEBSITE</p>
+      <p>The website and its contents are owned or licensed by the website. Material contained on the website must be presumed to be proprietary and copyrighted. Visitors have no rights whatsoever in the site content. Use of website content for any reason is unlawful unless it is done with express contract or permission of the website.</p>
+      <p>HYPERLINKING TO SITE, CO-BRANDING, “FRAMING” AND REFERENCING SITE PROHIBITED</p>
+      <p>Unless expressly authorized by website, no one may hyperlink this site, or portions thereof, (including, but not limited to, logotypes, trademarks, branding or copyrighted material) to theirs for any reason. Further, you are not allowed to reference the url (website address) of this website in any commercial or non-commercial media without express permission, nor are you allowed to ‘frame’ the site. You specifically agree to cooperate with the Website to remove or de-activate any such activities and be liable for all damages. You hereby agree to liquidated damages of US $100,000.00 plus costs and actual damages for violating this provision.</p>
+      <h3>DISCLAIMER FOR CONTENTS OF SITE</h3>
+      <p>The website disclaims any responsibility for the accuracy of the content of this website. Visitors assume the all risk of viewing, reading, using, or relying upon this information. Unless you have otherwise formed an express contract to the contrary with the website, you have no right to rely on any information contained herein as accurate. The website makes no such warranty.</p>
+      <p>Every effort has been made to accurately represent this product and its potential. Even though this industry is one of the few where one can write their own check in terms of earnings, there is no guarantee that you will earn any money using the techniques and ideas in these materials. Examples and testimonials in these materials are not to be interpreted as a promise or guarantee of earnings. Earning potential is entirely dependent on the person using our product, their ideas and techniques. This product is not a business opportunity and only provides advice and training about Internet and search engine optimization. This is a new product and system and as such there is no history of earnings from its use. WE DO NOT TRACK ACTUAL EARNINGS OF USERS OF OUR PRODUCT AS THE SAME WOULD VIOLATE THE USERS TRADE SECRETS AND CONFIDENTIAL OR PROPRIETARY INFORMATION. THE INFORMATION ON THIS SITE IS OUR EXPERIENCE WITH THE PRODUCT. IF YOU WANT TO SHARE YOUR EXPERIENCE LET US KNOW.</p>
+      <p>DISCLAIMER FOR HARM CAUSED TO YOUR COMPUTER OR SOFTWARE FROM INTERACTING WITH THIS WEBSITE OR ITS CONTENTS. VISITOR ASSUMES ALL RISK OF VIRUSES, WORMS, OR OTHER CORRUPTING FACTORS.</p>
+      <p>The website assumes no responsibility for damage to computers or software of the visitor or any person the visitor subsequently communicates with from corrupting code or data that is inadvertently passed to the visitor’s computer. Again, visitor views and interacts with this site, or banners or pop-ups or advertising displayed thereon, at his own risk.</p>
+      <h3>DISCLAIMER FOR HARM CAUSED BY DOWNLOADS</h3>
+      <p>Visitor downloads information from this site at this own risk. Website makes no warranty that downloads are free of corrupting computer codes, including, but not limited to, viruses and worms.</p>
+      <h3>LIMITATION OF LIABILITY</h3>
+      <p>By viewing, using, or interacting in any manner with this site, including banners, advertising, or pop-ups, downloads, and as a condition of the website to allow his lawful viewing, Visitor forever waives all right to claims of damage of any and all description based on any causal factor resulting in any possible harm, no matter how heinous or extensive, whether physical or emotional, foreseeable or unforeseeable, whether personal or business in nature.</p>
+      <h3>INDEMNIFICATION</h3>
+      <p>Visitor agrees that in the event he causes damage, which the Website is required to pay for, the Visitor, as a condition of viewing, promises to reimburse the Website for all.</p>
+      <h3>SUBMISSIONS</h3>
+      <p>Visitor agrees as a condition of viewing, that any communication between Visitor and Website is deemed a submission. All submissions, including portions thereof, graphics contained thereon, or any of the content of the submission, shall become the exclusive property of the Website and may be used, without further permission, for commercial use without additional consideration of any kind. Visitor agrees to only communicate that information to the Website, which it wishes to forever allow the Website to use in any manner as it sees fit. “Submissions” is also a provision of the Privacy Policy.</p>
+      <h3>NOTICE</h3>
+      <p>No additional notice of any kind for any reason is due Visitor and Visitor expressly warrants an understanding that the right to notice is waived as a condition for permission to view or interact with the website.</p>
+      <h3>DISPUTES</h3>
+      <p>As part of the consideration that the Website requires for viewing, using or interacting with this website, Visitor agrees to use binding arbitration for any claim, dispute, or controversy (“CLAIM”) of any kind (whether in contract, tort or otherwise) arising out of or relating to this purchase, this product, including solicitation issues, privacy issues, and terms of use issues. In the event the Visitor is the prevailing party, the Visitor shall bare the cost of its own attorney fees. Website reserves the right to litigate Vistor in a court of law in the jurisdiction of Website’s choice.</p>
+      <p>In no case shall the viewer, visitor, member, subscriber or customer have the right to go to court or have a jury trial. Viewer, visitor, member, subscriber or customer will not have the right to engage in pre-trial discovery except as provided in the rules; you will not have the right to participate as a representative or member of any class of claimants pertaining to any claim subject to arbitration; the arbitrator’s decision will be final and binding with limited rights of appeal.</p>
+      <p>The prevailing party shall be reimbursed by the other party for any and all costs associated with the dispute arbitration, including attorney fees, collection fees, investigation fees, travel expenses.</p>
+      <h3>JURISDICTION AND VENUE</h3>
+      <p>If any matter concerning this purchase shall be brought before a court of law, pre- or post-arbitration, Viewer, visitor, member, subscriber or customer agrees to that the sole and proper jurisdiction to be the state and city declared in the contact information of the web owner unless otherwise here specified. In the event that litigation is in a federal court, the proper court shall be the federal court of the websites choice.</p>
+      <h3>Billing model and cancellation/refund policy</h3>
+      <p>Refunds can be requested by contacting customer support unless otherwise stated in the offer. Refund eligability is determined by the terms posted at the time of purchase.</p>
+      <h3>APPLICABLE LAW</h3>
+      <p>Viewer, visitor, member, subscriber or customer agrees that the applicable law to be applied shall, in all cases, be that of the state of the Website listing in our contact information.</p>
+      <h3>CONTACT INFORMATION</h3>
+      <p>The operator of this website can be reached here.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

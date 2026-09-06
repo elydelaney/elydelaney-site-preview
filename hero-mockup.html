@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ElyDelaney.com – Full Page Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple:      #7c3aed;
+      --purple-light:#a855f7;
+      --dark-bg:     #0a0814;
+      --dark-2:      #120f1e;
+      --dark-3:      #1a1530;
+      --light-bg:    #f2ede8;
+      --light-2:     #e8e2db;
+      --text-light:  #f5f0eb;
+      --text-muted:  #c8c2bb;
+      --text-dark:   #1e1a2e;
+      --text-body:   #3d3650;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+
+    /* ════════════════════════════════════════
+       NAV
+    ════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 48px;
+      background: rgba(10, 8, 20, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(168,85,247,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--purple-light); }
+
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--purple-light); }
+
+    /* ════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Home_Background.png');
+      background-size: cover;
+      background-position: center top;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        100deg,
+        rgba(10,8,20,0.97) 0%,
+        rgba(10,8,20,0.90) 40%,
+        rgba(10,8,20,0.55) 65%,
+        rgba(10,8,20,0.08) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 130px 48px 80px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 18px;
+    }
+
+    .hero-headline {
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3.5vw, 2.9rem);
+      line-height: 1.1;
+      color: var(--text-light);
+      margin-bottom: 18px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--purple-light);
+    }
+    .hero-paren {
+      display: block;
+      font-size: 0.55em;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .hero-subhead {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+
+    /* form card */
+    .optin-card {
+      background: rgba(18,15,30,0.88);
+      border: 1px solid rgba(168,85,247,0.35);
+      border-radius: 14px;
+      padding: 32px 30px 26px;
+    }
+    .optin-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+    .optin-card p.sub {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+    .optin-form { display: flex; flex-direction: column; gap: 11px; }
+    .optin-form input {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 7px;
+      padding: 13px 16px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .optin-form input::placeholder { color: #5a5468; }
+    .optin-form input:focus { border-color: var(--purple-light); }
+
+    .btn-primary {
+      background: var(--purple);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 7px;
+      padding: 15px 24px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+    }
+    .btn-primary:hover { background: #6d28d9; transform: translateY(-1px); }
+
+    .optin-privacy {
+      font-size: 0.7rem;
+      color: #5a5468;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* ════════════════════════════════════════
+       AUTHORITY BAR
+    ════════════════════════════════════════ */
+    .authority-bar {
+      background: var(--dark-2);
+      border-top: 1px solid rgba(168,85,247,0.15);
+      border-bottom: 1px solid rgba(168,85,247,0.15);
+      padding: 22px 48px;
+      text-align: center;
+    }
+    .authority-bar p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #4e4865;
+      margin-bottom: 14px;
+    }
+    .authority-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .authority-logos span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #4e4865;
+      text-transform: uppercase;
+    }
+
+    /* ════════════════════════════════════════
+       SECTION BASE STYLES
+    ════════════════════════════════════════ */
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-weight: 900;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    /* ════════════════════════════════════════
+       PROBLEM / PROMISE  (dark section)
+    ════════════════════════════════════════ */
+    .problem-section {
+      background: var(--dark-3);
+      padding: 90px 0;
+    }
+    .problem-section .section-title { color: var(--text-light); }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .problem-left p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .problem-left p strong { color: var(--text-light); }
+
+    .problem-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .stat-card {
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(168,85,247,0.25);
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+    .stat-card .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: var(--purple-light);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════
+       HOW WE HELP  (light section w/ gears)
+    ════════════════════════════════════════ */
+    .help-section {
+      position: relative;
+      background: var(--light-bg);
+      padding: 90px 0;
+      overflow: hidden;
+    }
+    .help-section .section-tag { color: var(--purple); }
+    .help-section .section-title { color: var(--text-dark); }
+
+    /* Gear decorations */
+    .gear-bg {
+      position: absolute;
+      opacity: 0.055;
+      pointer-events: none;
+    }
+    .gear-bg.gear-1 { bottom: -60px; right: -60px; width: 380px; height: 380px; }
+    .gear-bg.gear-2 { top: -40px;  left: -40px;  width: 240px; height: 240px; }
+    .gear-bg.gear-3 { bottom: 80px; right: 320px; width: 140px; height: 140px; }
+
+    .help-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .help-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 28px;
+      border-bottom: 4px solid var(--purple);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .help-card:hover { transform: translateY(-4px); }
+    .help-card-icon {
+      width: 46px; height: 46px;
+      background: rgba(124,58,237,0.08);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .help-card-icon svg { width: 24px; height: 24px; stroke: var(--purple); fill: none; stroke-width: 2; }
+    .help-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .help-card p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--text-body);
+    }
+    .help-card .card-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--purple);
+      text-decoration: none;
+    }
+    .help-card .card-link:hover { color: #6d28d9; }
+
+    /* ════════════════════════════════════════
+       BOOK FEATURE  (dark section)
+    ════════════════════════════════════════ */
+    .book-section {
+      background: var(--dark-bg);
+      padding: 90px 0;
+      border-top: 1px solid rgba(168,85,247,0.12);
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .book-cover {
+      background: linear-gradient(135deg, #1a1530 0%, #2d2060 100%);
+      border-radius: 8px;
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(168,85,247,0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .book-cover-inner {
+      text-align: center;
+      padding: 32px;
+    }
+    .book-cover-inner .book-title-display {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .book-cover-inner .book-subtitle-display {
+      font-size: 0.75rem;
+      color: var(--purple-light);
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+    }
+    .book-cover-inner .book-author {
+      margin-top: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+    }
+    .book-cover-gear {
+      position: absolute;
+      bottom: -30px; right: -30px;
+      width: 160px; height: 160px;
+      opacity: 0.07;
+    }
+
+    .book-right .section-title { color: var(--text-light); }
+    .book-right p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .book-right .virtue-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 30px;
+    }
+    .virtue-pill {
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(168,85,247,0.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--purple-light);
+      letter-spacing: 0.05em;
+    }
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid var(--purple-light);
+      color: var(--purple-light);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: var(--purple-light); color: #fff; }
+
+    /* ════════════════════════════════════════
+       TESTIMONIALS  (light section w/ gears)
+    ════════════════════════════════════════ */
+    .testimonials-section {
+      position: relative;
+      background: var(--light-2);
+      padding: 90px 0;
+      overflow: hidden;
+    }
+    .testimonials-section .section-tag { color: var(--purple); }
+    .testimonials-section .section-title { color: var(--text-dark); }
+
+    .testimonials-section .gear-bg.gear-1 { bottom: -80px; left: -60px; width: 320px; }
+    .testimonials-section .gear-bg.gear-2 { top: 20px; right: 40px; width: 180px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 26px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      color: var(--purple);
+      opacity: 0.2;
+      position: absolute;
+      top: 12px; left: 20px;
+      line-height: 1;
+    }
+    .testimonial-card p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--purple-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-info strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .author-info span {
+      font-size: 0.75rem;
+      color: #8a8098;
+    }
+
+    /* ════════════════════════════════════════
+       ABOUT  (dark section)
+    ════════════════════════════════════════ */
+    .about-section {
+      background: var(--dark-2);
+      padding: 90px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-photo {
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1a1530, #0a0814);
+      aspect-ratio: 4/5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border: 1px solid rgba(168,85,247,0.2);
+      overflow: hidden;
+      position: relative;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .about-photo-placeholder {
+      text-align: center;
+      padding: 32px;
+      color: #3d3555;
+    }
+    .about-photo-placeholder svg { width: 64px; height: 64px; opacity: 0.3; }
+    .about-photo-placeholder p { font-size: 0.78rem; margin-top: 12px; opacity: 0.4; }
+
+    .about-right .section-title { color: var(--text-light); }
+    .about-right p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .about-cta { margin-top: 28px; }
+
+    /* ════════════════════════════════════════
+       FAQ  (light section w/ gears)
+    ════════════════════════════════════════ */
+    .faq-section {
+      position: relative;
+      background: var(--light-bg);
+      padding: 90px 0;
+      overflow: hidden;
+    }
+    .faq-section .section-tag  { color: var(--purple); }
+    .faq-section .section-title { color: var(--text-dark); }
+    .faq-section .gear-bg.gear-1 { top: -50px; right: -50px; width: 280px; }
+    .faq-section .gear-bg.gear-2 { bottom: -30px; left: 100px; width: 120px; }
+
+    .faq-list { margin-top: 48px; max-width: 760px; }
+    .faq-item {
+      border-bottom: 1px solid #ddd5cc;
+      padding: 24px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid #ddd5cc; }
+    .faq-q {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--text-body);
+    }
+
+    /* ════════════════════════════════════════
+       FOOTER CTA  (dark / purple)
+    ════════════════════════════════════════ */
+    .footer-cta {
+      background: linear-gradient(135deg, #1a0a3e 0%, #0a0814 60%);
+      padding: 90px 0;
+      text-align: center;
+      border-top: 1px solid rgba(168,85,247,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-cta .gear-bg.gear-1 { bottom: -60px; right: -40px; width: 300px; opacity: 0.04; }
+    .footer-cta .gear-bg.gear-2 { top: -40px; left: -40px; width: 200px; opacity: 0.04; }
+
+    .footer-cta h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+    .footer-cta h2 em { font-style: normal; color: var(--purple-light); }
+    .footer-cta p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .footer-cta .btn-primary {
+      width: auto;
+      display: inline-block;
+      padding: 16px 40px;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    /* ════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════ */
+    footer {
+      background: #050410;
+      padding: 32px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-top: 1px solid rgba(168,85,247,0.1);
+    }
+    footer p {
+      font-size: 0.78rem;
+      color: #3d3555;
+    }
+    footer a { color: #3d3555; text-decoration: none; }
+    footer a:hover { color: var(--purple-light); }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+
+      .hero-content,
+      .problem-grid,
+      .book-grid,
+      .about-grid { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+
+      .help-cards,
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .section-inner { padding: 0 24px; }
+
+      .book-cover { max-width: 280px; margin: 0 auto; }
+      .about-photo { max-width: 280px; margin: 0 auto; }
+    }
+
+    /* scroll-hint */
+    .scroll-hint {
+      position: absolute; bottom: 28px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column;
+      align-items: center; gap: 5px; opacity: 0.35;
+    }
+    .scroll-hint span { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .scroll-hint svg { animation: bounce 1.8s ease-in-out infinite; }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(6px); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-logo">Ely <span>Delaney</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Book</a></li>
+    <li><a href="#">Programs</a></li>
+    <li><a href="#">Speaking</a></li>
+    <li><a href="#">Work With Ely</a></li>
+    <li><a href="#">Articles</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <!-- LEFT: text -->
+    <div class="hero-left">
+      <span class="hero-eyebrow">The Follow-Up Fix &nbsp;•&nbsp; Free 5-Day Email Series</span>
+      <h1 class="hero-headline">
+        Escape the '3 Touches and Done' Trap<br>
+        <em>That's Killing Your Sales Potential</em>
+        <span class="hero-paren">(Without Becoming an Annoying Pest)</span>
+      </h1>
+      <p class="hero-subhead">
+        In this free email series, you'll discover the relationship-building approach
+        that turns one-time prospects into lifetime referral sources — without
+        constant pitching or aggressive sales tactics.
+      </p>
+    </div>
+
+    <!-- RIGHT: form -->
+    <div class="optin-card">
+      <h3>Yes — Send Me the Free Series</h3>
+      <p class="sub">Enter your name and email to get instant access.</p>
+      <form class="optin-form" action="#" method="post">
+        <input type="text"  name="first_name" placeholder="First Name" required />
+        <input type="email" name="email"      placeholder="Email Address" required />
+        <button type="submit" class="btn-primary">Get Instant Access →</button>
+      </form>
+      <p class="optin-privacy">No spam. Unsubscribe anytime. Promise.</p>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5f0eb" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ AUTHORITY BAR ════════════════════════════════ -->
+<div class="authority-bar">
+  <p>Trusted by professionals and organizations including</p>
+  <div class="authority-logos">
+    <span>SCORE</span>
+    <span>NSBA</span>
+    <span>BNI</span>
+    <span>Toastmasters</span>
+    <span>NAWBO</span>
+    <span>Chambers of Commerce</span>
+  </div>
+</div>
+
+<!-- ══ PROBLEM / PROMISE ═════════════════════════════ -->
+<section class="problem-section">
+  <div class="section-inner">
+    <span class="section-tag">The Real Problem</span>
+    <h2 class="section-title" style="color:var(--text-light);">
+      Most follow up systems are built to chase.<br>
+      <em style="font-style:normal; color:var(--purple-light);">Yours should be built to attract.</em>
+    </h2>
+
+    <div class="problem-grid">
+      <div class="problem-left">
+        <p>Most professionals follow up two or three times. Then they give up. They tell themselves the prospect wasn't ready. <strong>But the prospect is still out there. Still looking. Just waiting for the right moment.</strong></p>
+        <p>That moment comes for someone. It just doesn't come for you — because you stopped showing up.</p>
+        <p>I built my business on one simple idea: the money is not in the list. It's in the relationship with the list. An automated follow up system lets you stay in that relationship — without chasing, without pressure, and without spending every day manually reaching out.</p>
+        <p><strong>It keeps working long after the conversation ends.</strong></p>
+      </div>
+      <div class="problem-stats">
+        <div class="stat-card">
+          <div class="stat-num">80%</div>
+          <p>of sales require 5 or more follow up touches. Most people quit after 2.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10 yrs</div>
+          <p>The length of one email relationship that turned into a referral. Real story. Real result.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">24 mo.</div>
+          <p>How long the Ultimate Follow Up System keeps running — automatically — once it's built.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW WE HELP ═══════════════════════════════════ -->
+<section class="help-section">
+  <!-- Gear decorations -->
+  <svg class="gear-bg gear-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/>
+  </svg>
+  <svg class="gear-bg gear-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/>
+  </svg>
+  <svg class="gear-bg gear-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/>
+  </svg>
+
+  <div class="section-inner">
+    <span class="section-tag">How We Help</span>
+    <h2 class="section-title">Three ways to work together.</h2>
+
+    <div class="help-cards">
+      <div class="help-card">
+        <div class="help-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Speaking</h3>
+        <p>Ely speaks to business groups, associations, and corporate teams on follow up strategy, relationship marketing, and building trust through email. Practical, story-driven, and immediately actionable.</p>
+        <a href="#" class="card-link">Book Ely to Speak →</a>
+      </div>
+
+      <div class="help-card">
+        <div class="help-card-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Follow Up Systems</h3>
+        <p>Done-for-you automated email campaigns built around your voice, your clients, and your business. From the "Follow Up Jumpstart" to the full Ultimate Follow Up System — we build it, you run it.</p>
+        <a href="#" class="card-link">See How It Works →</a>
+      </div>
+
+      <div class="help-card">
+        <div class="help-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Programs &amp; Courses</h3>
+        <p>Self-paced courses and resources for professionals who want to build their own systems. Including the DIY Ultimate Follow Up System course and more.</p>
+        <a href="#" class="card-link">View Programs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOOK FEATURE ══════════════════════════════════ -->
+<section class="book-section">
+  <div class="section-inner">
+    <div class="book-grid">
+      <div class="book-cover">
+        <div class="book-cover-inner">
+          <div class="book-title-display">The Follow Up Code</div>
+          <div class="book-subtitle-display">Seven Virtues for Building<br>Trust Through Email</div>
+          <div class="book-author">Ely Delaney</div>
+        </div>
+        <svg class="book-cover-gear" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#a855f7" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/>
+        </svg>
+      </div>
+
+      <div class="book-right">
+        <span class="section-tag">The Book</span>
+        <h2 class="section-title" style="color:var(--text-light);">The Follow Up Code</h2>
+        <p>Built around the seven virtues of Bushido, <em>The Follow Up Code</em> is a practical guide to building real trust through email — the kind that turns prospects into clients and clients into advocates.</p>
+        <p>This is not a book about tactics. It's about the philosophy behind why some follow up works and most of it doesn't.</p>
+        <div class="virtue-list">
+          <span class="virtue-pill">Rectitude</span>
+          <span class="virtue-pill">Courage</span>
+          <span class="virtue-pill">Benevolence</span>
+          <span class="virtue-pill">Respect</span>
+          <span class="virtue-pill">Honesty</span>
+          <span class="virtue-pill">Honor</span>
+          <span class="virtue-pill">Loyalty</span>
+        </div>
+        <a href="https://amzn.to/4c4exEM" target="_blank" class="btn-outline">Get the Book on Amazon →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══════════════════════════════════ -->
+<section class="testimonials-section">
+  <svg class="gear-bg gear-1" viewBox="0 0 100 100"><path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/></svg>
+  <svg class="gear-bg gear-2" viewBox="0 0 100 100"><path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/></svg>
+
+  <div class="section-inner">
+    <span class="section-tag">What People Are Saying</span>
+    <h2 class="section-title">Real results from real professionals.</h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"We had more responses in the first 60 days than we had in the previous four years combined. The system just works."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <strong>[Client Name]</strong>
+            <span>Business Consultant</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"I hired Ely specifically because I had watched him consistently show up and help people over the course of a decade. I never felt sold to — I felt cared for."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div class="author-info">
+            <strong>[Client Name]</strong>
+            <span>Chamber Member</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"Ely built a campaign for us in 2013. It is still running today. That's not marketing — that's infrastructure."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <strong>[Client Name]</strong>
+            <span>Executive Coach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══════════════════════════════════════════ -->
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="ElyDelaney_1400x1400_Transparent.png" alt="Ely Delaney" onerror="this.style.display='none'"/>
+        <div class="about-photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <p>[ Ely photo ]</p>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <span class="section-tag">About Ely</span>
+        <h2 class="section-title" style="color:var(--text-light);">The Follow Up Rockstar.<br>The People Whisperer.</h2>
+        <p>Ely Delaney is an email marketing strategist, ghostwriter, speaker, and author. He helps professional service providers build done-for-you automated follow up systems that keep working long after the conversation ends.</p>
+        <p>He started in web design in 1995. He pivoted to relationship marketing. He built campaigns that are still running a decade later. He speaks to thousands of professionals every year about the one thing most of them are getting wrong.</p>
+        <p><strong style="color:var(--text-light);">The money is in the relationship with the list.</strong></p>
+        <div class="about-cta">
+          <a href="#" class="btn-outline">Book Ely to Speak →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ═══════════════════════════════════════════ -->
+<section class="faq-section">
+  <svg class="gear-bg gear-1" viewBox="0 0 100 100"><path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/></svg>
+  <svg class="gear-bg gear-2" viewBox="0 0 100 100"><path fill="#7c3aed" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/></svg>
+
+  <div class="section-inner">
+    <span class="section-tag">Common Questions</span>
+    <h2 class="section-title">You probably have a few questions.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">What do you actually do?</p>
+        <p class="faq-a">I build automated email follow up systems for professional service providers. Think consultants, coaches, CPAs, attorneys, financial advisors. People who have great conversations but lose the follow through. I fix that — with a system that runs on its own.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How is this different from just sending a newsletter?</p>
+        <p class="faq-a">A newsletter goes to everyone at the same time. An automated follow up system meets people where they are in the relationship — and follows up based on that. It feels personal because it is designed to be personal.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do you work with people who are just starting out?</p>
+        <p class="faq-a">Yes. The free Follow-Up Fix email series is a good first step. If you want something done for you, the "Follow Up Jumpstart" is the right entry point.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do you do speaking engagements?</p>
+        <p class="faq-a">Absolutely. I speak to business associations, mastermind groups, chambers of commerce, and corporate teams. Topics center on follow up strategy, relationship marketing, and building trust through email. Head to the Speaking page to learn more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER CTA ═════════════════════════════════════ -->
+<section class="footer-cta">
+  <svg class="gear-bg gear-1" viewBox="0 0 100 100"><path fill="#a855f7" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/></svg>
+  <svg class="gear-bg gear-2" viewBox="0 0 100 100"><path fill="#a855f7" d="M43.3 5.7l-3 8.3a34 34 0 0 0-8.6 3.6L23 14.3l-9 9 3.3 8.7A34 34 0 0 0 13.7 40l-8.3 3 0 12.7 8.3 3a34 34 0 0 0 3.6 8.6L13.9 76l9 9 8.7-3.3a34 34 0 0 0 8.6 3.6l3 8.3 12.7 0 3-8.3a34 34 0 0 0 8.6-3.6l8.7 3.3 9-9-3.3-8.7a34 34 0 0 0 3.6-8.6l8.3-3 0-12.7-8.3-3a34 34 0 0 0-3.6-8.6l3.3-8.7-9-9-8.7 3.3a34 34 0 0 0-8.6-3.6l-3-8.3zm6.3 27.3a17 17 0 1 1 0 34 17 17 0 0 1 0-34z"/></svg>
+
+  <div class="section-inner">
+    <h2>Ready to stop leaving money<br><em>on the table?</em></h2>
+    <p>Let's build a follow up system that works while you sleep — and keeps working years from now.</p>
+    <a href="https://followuprockstar.com/call" class="btn-primary">Book a Free Strategy Call →</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════════════ -->
+<footer>
+  <p>© 2026 Ely Delaney · Your Marketing University · All Rights Reserved</p>
+  <p>
+    <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="#">Terms</a> &nbsp;·&nbsp;
+    <a href="https://followuprockstar.com/call">Book a Call</a>
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney &middot; Retainer Terms &amp; Conditions</title>
+<meta name="description" content="Retainer Terms &amp; Conditions for Purple Knight Marketing and Ely Delaney.">
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#5C1064;
+  --purple-deep:#3C1C44;
+  --ink:#330B33;
+  --purple-mid:#944C9C;
+  --orchid:#BC64C4;
+  --slate-plum:#6B5464;
+  --gray:#949C9C;
+  --lavender:#E4DCE4;
+  --mist:#F5F2F6;
+  --white:#fff;
+
+  --display:'Archivo',Tahoma,sans-serif;
+  --body:'Inter',Tahoma,sans-serif;
+
+  --container:1170px;
+  --nav-h:70px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+.btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--lavender)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* LEGAL SUBNAV */
+.legal-subnav{background:var(--mist);border-bottom:1px solid var(--lavender);margin-top:var(--nav-h)}
+.legal-subnav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px}
+.legal-subnav a{display:inline-block;padding:13px 14px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.7px;
+                 text-transform:uppercase;color:var(--slate-plum);text-decoration:none;border-bottom:2px solid transparent;
+                 white-space:nowrap;transition:.15s}
+.legal-subnav a:hover{color:var(--purple)}
+.legal-subnav a.on{color:var(--purple);border-bottom-color:var(--purple)}
+
+/* LEGAL HERO + BODY */
+.legal-hero{background:var(--purple-deep);padding:50px 0 40px;text-align:center}
+.legal-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,32px);line-height:1.25;letter-spacing:-.3px;color:#fff;max-width:760px;margin:0 auto}
+
+.legal-body{padding:60px 0 100px}
+.legal-content{max-width:760px;margin:0 auto}
+.legal-content p{font-size:14.5px;line-height:1.85;margin-bottom:18px;color:var(--slate-plum)}
+.legal-content h3{font-family:var(--display);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.3px;color:var(--ink);margin:32px 0 14px}
+.legal-content h3:first-child{margin-top:0}
+.legal-content ul{margin:0 0 18px 20px}
+.legal-content li{font-size:14.5px;line-height:1.8;margin-bottom:8px;color:var(--slate-plum)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--body);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="retainerterms">
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="legal-subnav">
+  <div class="wrap">
+      <a href="terms-and-conditions.html">Terms and Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="amazon-affiliate-disclaimer.html">Amazon Affiliate Disclaimer</a>
+      <a href="anti-spam-policy.html">Anti-Spam Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="digital-millennium-copyright-act-notice.html">Digital Millennium Copyright</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="program-terms-and-conditions.html">Program Terms and Conditions</a>
+      <a href="hosting-terms-conditions.html">Hosting Terms &amp; Conditions</a>
+      <a href="retainertos.html" class="on">Retainer Terms &amp; Conditions</a>
+      <a href="affiliate-agreement.html">Affiliate Agreement</a>
+  </div>
+</div>
+
+<header class="legal-hero">
+  <div class="wrap">
+    <h1>Retainer Terms &amp; Conditions</h1>
+  </div>
+</header>
+
+<div class="legal-body">
+  <div class="wrap">
+    <div class="legal-content">
+      <p>Maintenance, Implementation, and Strategy Monthly Retainer Terms &amp; Conditions of Service</p>
+      <p>Scope of Work:</p>
+      <p>Purple Knight Marketing shall perform for the Client those services and deliver to the Client those items listed in the Scope of Work which is included in the project estimate/invoice. Anything not listed therein is not included and is not implied to be included.</p>
+      <p>Purple Knight Marketing shall perform the services listed in the Scope of Work section within estimate/invoice.</p>
+      <p>Unless listed within the Invoice, the Client is responsible for all copywriting assets necessary for the campaigns. And all associated Client content used in funnel, courses, products or services.</p>
+      <p>Client Delays: If the Client delays project timeline, the timeline for payments due will NOT be affected as this is a Client delay, not Consultant delay.</p>
+      <p>Consultant Delays: If Consultant delays project timeline, the payment timeline will adjust based on when the above milestones are achieved and Client will not have to pay until then.</p>
+      <p>If Scope of Work includes Copy: The Client is provided with one (1) hour of unlimited copy revisions. After the one hour of free time has been used, the Client will be billed at $150/hour for further revisions. Services are billed in 30-minute time blocks.</p>
+      <p>If Scope of Work includes Campaign/Automation Services: The Client will receive one (1) free hour of campaign revisions for marketing automation using High Level/ FURS CRM. After the one hour of free revisions is used, the Client will be billed at $125 per hour for additional revisions. Services are billed in 30-minute time blocks.</p>
+      <p>Expiration: All revisions, used or unused, expire within 10 calendar days from date of project completion.</p>
+      <p>Limited Warranty for Project Work: The services rendered by Consultant are guaranteed for 30 days from date of project completion.</p>
+      <p>Limited warranty is voided if Client makes changes or alterations to the work completed by Consultant.</p>
+      <p>Warranty does not cover technological factors including, but not limited to software compatibility, SAAS updates, API integrations or features that are no longer supported by the owner of technology (such as plug-ins or features in software and/services).</p>
+      <p>Sales Final and Non-Refundable: All forms of payment should be made out to Purple Knight Marketing. Purple Knight Marketing puts a great deal of time and resources into every client’s project even before the projects officially start. To ensure PKM’s staff and the Client are committed to the agreed-upon terms, all services purchased by Client are non-refundable and all sales are final.</p>
+      <p>Carrying Fee: In the unfortunate circumstance of a balance being owed to Consultant, there will be a monthly Carrying Fee charged to the outstanding balance in the amount of 3% per month.</p>
+      <p>Purple Knight Marketing may suspend services at any time that the Client is in arrears or has refused to pay amounts due under this Agreement. In such an event, fees will continue to accrue as set forth herein.</p>
+      <p>In the event that the Client does not contact Purple Knight Marketing or respond to Purple Knight Marketing’s attempt to contact the Client for a period of 30 days, Purple Knight Marketing may suspend services. In such an event, fees will continue to accrue as set forth herein.</p>
+      <p>Further, under those circumstances, Purple Knight Marketing may also elect to terminate this Agreement at its option.</p>
+      <p>Right to Work With Any Client: Nothing in this Agreement shall be construed to prohibit Purple Knight Marketing from serving clients in similar or the same line of business or with directly competing objectives. In the event that a particular resource or opportunity may be delivered or directed to a limited number of Purple Knight Marketing’s clients, the Client grants Purple Knight Marketing the sole discretion of prioritizing such resources or opportunities among Purple Knight Marketing’s clients and waives any objection thereto.</p>
+      <p>Non-Disclosure: Each party agrees that it will not reproduce, disclose to others or use for any purpose other than performing its obligations under this Agreement any of the Confidential Information of the other party for the term of this Agreement and for a period of two (2) years after the expiration or earlier termination of this Agreement. Each party agrees that it will not reproduce, disclose to others or use for any purpose other than to perform its obligations under the Agreement any of the Trade Secrets of the other party at any time during or after the term of this Agreement or until such Trade Secrets lose their status as such by becoming generally available to the public by independent discovery, development, or publication.</p>
+      <p>Ownership Of Work: Any intellectual property created in furtherance of relationship between the parties, whether as the result of the work of one party or the joint efforts of the parties, shall be the sole intellectual property of Purple Knight Marketing, who shall have the sole right to maintain or obtain copyright, patent or trade secret protection for such developments. For any and all intellectual property that Purple Knight Marketing recommends that the Client publish under its own name, the Client shall be deemed to have been granted a fully-paid license to use, publish and create derivative works based on that property.</p>
+      <p>Right to Showcase Work: the Client hereby grants Purple Knight Marketing the right to use and publish the Client’s Name and Trademark in Purple Knight Marketing’s marketing materials solely for the purpose of Purple Knight Marketing’s marketing of Purple Knight Marketing’s products and services and not to represent any product or service as the product or service of the Client.</p>
+      <p>Non-Solicitation: The parties mutually agree that during the term of this Agreement, and for a period of one (1) year following the date of termination of this Agreement, neither shall, directly or indirectly, solicit...any individual...(“Personnel”), to leave their employment or engagement with the other party. In the event of a default of this Section by one party...the defaulting party agrees to compensate the other party in an amount equal to one hundred percent (100%) of such Personnel compensation for the first year of engagement or employment by the defaulting party.</p>
+      <p>No Guarantee Of Results: Except as set forth herein, in no event shall Purple Knight Marketing or any of Purple Knight Marketing’s owners, officers, shareholders, employees, agents, contractors, subcontractors or affiliates be liable to the Client or any of its affiliates for any consequential, incidental, indirect, special, punitive or exemplary damages (including, without limitation, lost profits, business or goodwill) suffered or incurred by such other party or its affiliates in connection with this Agreement.</p>
+      <p>ARBITRATION AND DISPUTE RESOLUTION. The parties will use their best efforts to amicably resolve any dispute. If this is not possible, any controversy or claim arising out of or relating to this Agreement, or the breach thereof, shall be settled by arbitration in Multnomah County administered by the American Arbitration Association under its Commercial Arbitration Rules, and judgment on the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof.</p>
+      <p>The Arbitrator shall not have the power to award total damages against Purple Knight Marketing exceeding the amount of fees that Purple Knight Marketing received from the Client.</p>
+      <p>TAXES. From time to time governments enact laws and levy taxes and tariffs affecting Internet electronic commerce.</p>
+      <p>The Client agrees that it is solely responsible for complying with such laws, taxes, and tariffs, and will hold harmless, protect, and defend Purple Knight Marketing. and its employees and subcontractors from any claim, suit, penalty, tax, or tariff arising from the Client’s exercise of Internet electronic commerce.</p>
+      <p>COUNTERPARTS AND ELECTRONIC SIGNATURES. This agreement, agreements ancillary to this agreement, and related documents entered into in connection with this agreement are signed when a party’s signature is delivered by email, or other electronic medium including the Client’s digital signature.</p>
+      <p>These signatures must be treated in all respects as having the same force and effect as original signatures.</p>
+      <p>Office hours are 9:00 AM PT - 5:00 PM PT, Monday- Thursday (no weekends)</p>
+      <p>Office closed on US bank observed holidays and December 22nd-January 1st.</p>
+      <h3>Office number: 602-903-4411</h3>
+      <h3>Email: [email protected]</h3>
+      <p>Emails, conference and phone calls are handled during office hours.</p>
+      <p>Although my team and I almost always respond evenings and weekends, it is not guaranteed and should not be expected.</p>
+      <p>We do not text and all employees are instructed not to respond to text messages.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
