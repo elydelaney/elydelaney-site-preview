@@ -188,32 +188,29 @@ section{padding:90px 0}
 ═══════════════════════════════════════════════ */
 .acc{border-top:1px solid var(--line-dark-strong)}
 .acc-item{border-bottom:1px solid var(--line-dark-strong)}
-.acc-btn{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
-         background:none;border:0;cursor:pointer;text-align:left;padding:28px 4px;font-family:var(--sans)}
+.acc-btn{width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;
+         background:none;border:0;cursor:pointer;text-align:left;padding:26px 4px;font-family:var(--sans)}
 .acc-btn:hover .acc-title{color:var(--purple)}
-.acc-idx{font-family:var(--mono);font-size:12px;letter-spacing:.24em;color:var(--purple);align-self:start;padding-top:6px}
 .acc-title{font-family:var(--sans);font-weight:600;font-size:22px;letter-spacing:-.012em;line-height:1.24;
            color:var(--plum-deep);transition:color .18s}
-.acc-title span{display:block;font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.24em;
-                text-transform:uppercase;color:var(--text-dark);margin-top:10px;line-height:1.5}
-.acc-sign{position:relative;width:16px;height:16px;flex:none}
+.acc-title span{display:block;font-family:var(--sans);font-weight:400;font-style:italic;font-size:15px;
+                text-transform:none;letter-spacing:0;color:var(--text-dark);margin-top:8px;line-height:1.5}
+.acc-sign{position:relative;width:16px;height:16px;flex:none;margin-top:6px}
 .acc-sign::before,.acc-sign::after{content:'';position:absolute;background:var(--purple);transition:transform .22s ease,opacity .22s ease}
 .acc-sign::before{left:0;top:7px;width:16px;height:2px}
 .acc-sign::after{left:7px;top:0;width:2px;height:16px}
 .acc-btn[aria-expanded="true"] .acc-sign::after{transform:scaleY(0);opacity:0}
 .acc-panel{overflow:hidden;max-height:0;transition:max-height .32s ease}
-.acc-inner{padding:2px 4px 36px;max-width:66ch}
+.acc-inner{padding:2px 4px 40px;max-width:66ch}
 .acc-inner p{font-size:17px;line-height:1.68;margin-bottom:16px}
 .acc-inner p:last-child{margin-bottom:0}
-.acc-side{margin-top:30px}
-.acc-side .label{display:block;margin-bottom:10px;color:var(--purple)}
-.acc-for{border-left:2px solid var(--amethyst);padding:2px 0 2px 20px;margin-bottom:26px}
-.acc-for p{font-size:15.5px;line-height:1.62;margin-bottom:0}
-.acc-take{list-style:none}
-.acc-take li{padding:12px 0;border-top:1px solid var(--line-dark);font-size:15.5px;line-height:1.62}
-.acc-take li:first-child{border-top:0}
-.acc-take b{color:var(--plum-deep);font-weight:700}
-.acc-cta{margin-top:26px}
+.acc-side{margin-top:28px}
+.acc-side h4{font-family:var(--sans);font-weight:600;font-size:15px;color:var(--plum-deep);margin-bottom:8px}
+.acc-for p{font-size:15.5px;line-height:1.62;margin-bottom:24px;color:var(--text-dark)}
+.acc-take{list-style:none;margin-bottom:22px}
+.acc-take li{padding:5px 0;font-size:15.5px;line-height:1.62}
+.acc-take b{color:var(--plum-deep);font-weight:600}
+.acc-cta{font-size:14px}
 
 /* ═══════════════════════════════════════════════
    SPEAKING TESTIMONIALS — avatar cards
@@ -292,7 +289,7 @@ footer{background:#330B33;padding:70px 0}
 <!-- ══ NAV ══════════════════════════════════════ -->
 <nav id="nav">
   <div class="wrap">
-    <a href="homepage-v4.html" class="nav-logo"><img src="elylogowhite2026.png" alt="Ely Delaney"></a>
+    <a href="homepage-v4.html" class="nav-logo"><img src="ElyLogoWhiteClean2026.png" alt="Ely Delaney"></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="homepage-v4.html" data-page="home">Home</a></li>
@@ -355,7 +352,6 @@ footer{background:#330B33;padding:70px 0}
 
       <div class="acc-item">
         <button class="acc-btn" type="button" aria-expanded="false" aria-controls="topic-1" id="topic-1-btn">
-          <span class="acc-idx">01</span>
           <span class="acc-title">The Relationship Advantage
             <span>The Code That Turns Contacts Into Loyal Clients</span>
           </span>
@@ -371,10 +367,10 @@ footer{background:#330B33;padding:70px 0}
             </div>
             <div class="acc-side">
               <div class="acc-for">
-                <span class="label">Who It&rsquo;s For</span>
+                <h4>Who It&rsquo;s For</h4>
                 <p>Professionals who sell through relationships rather than transactions, and anyone whose prospects need to trust them before they buy.</p>
               </div>
-              <span class="label">What They Take Home</span>
+              <h4>What They Take Home</h4>
               <ul class="acc-take">
                 <li><b>The Honor Framework.</b> Build a reputation that precedes you, so your name carries weight before you ever make an ask.</li>
                 <li><b>The Compassion Advantage.</b> Why the people who take longest to say yes often become the most loyal clients.</li>
@@ -382,7 +378,7 @@ footer{background:#330B33;padding:70px 0}
                 <li><b>The Disappearing Act Problem.</b> The right way to re-engage after going quiet, without it feeling awkward.</li>
                 <li><b>The Bring-Them-Back Campaign.</b> How one client went from under 7% open rates to 9%, 11%, then 18% across three emails.</li>
               </ul>
-              <a href="#" class="clink acc-cta">Get The Full One-Sheet <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#" class="clink acc-cta">Get The Full One-Sheet</a>
             </div>
           </div>
         </div>
@@ -390,7 +386,6 @@ footer{background:#330B33;padding:70px 0}
 
       <div class="acc-item">
         <button class="acc-btn" type="button" aria-expanded="false" aria-controls="topic-2" id="topic-2-btn">
-          <span class="acc-idx">02</span>
           <span class="acc-title">Your New Lead Engagement
             <span>Earn The Sale Before You Ask For It</span>
           </span>
@@ -405,10 +400,10 @@ footer{background:#330B33;padding:70px 0}
             </div>
             <div class="acc-side">
               <div class="acc-for">
-                <span class="label">Who It&rsquo;s For</span>
+                <h4>Who It&rsquo;s For</h4>
                 <p>Entrepreneurs and business owners who already have a lead magnet, a checklist, an ebook, a pre-recorded webinar, but no real follow up sequence behind it, so new leads opt in and then go cold. Also for anyone with a CRM sitting mostly unused, or who has been told &ldquo;email marketing is dead&rdquo; and wants to see why that is a message problem, not a channel problem.</p>
               </div>
-              <span class="label">What They Take Home</span>
+              <h4>What They Take Home</h4>
               <ul class="acc-take">
                 <li><b>The exact sequence.</b> Every touch in the New Lead Engagement campaign, and the timing behind each one.</li>
                 <li><b>Why the first email should never pitch.</b> What to send instead, right after someone opts in.</li>
@@ -510,7 +505,7 @@ footer{background:#330B33;padding:70px 0}
 
       <!-- Brand column -->
       <div class="foot-brand">
-        <img src="elylogowhite2026.png" alt="Ely Delaney, Communications Strategist">
+        <img src="ElyLogoWhiteClean2026.png" alt="Ely Delaney, Communications Strategist">
 
         <div class="socials">
           <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
