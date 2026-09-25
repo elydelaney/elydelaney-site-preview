@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Delaney · Speaking Samples</title>
+<meta name="description" content="Watch Ely Delaney speak. Eight full-length and short samples from keynotes, summits, and live events. Long or short, in person or online.">
+<link rel="icon" href="favicon.png">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS: Visual Style Guide v1.2 (shared with homepage-v4.html)
+═══════════════════════════════════════════════ */
+:root{
+  /* ---- Section 4 - Color ------------------------------------ */
+  --plum-deep:#2E0F35;
+  --plum-surface:#3A1543;
+  --purple:#5C1064;
+  --plum-mid:#7A2B84;
+  --plum-black:#1B0A20;
+  --amethyst:#A95CB4;
+  --platinum:#C9CDD2;
+  --silver-hi:#F2F4F6;
+  --silver-mid:#9AA1A8;
+  --paper:#F5F2F5;
+  --text-light:#E9E1EA;
+  --text-dark:#4C3A52;
+
+  /* Machined Silver ramp. The 48% band is the highlight break. */
+  --metal:linear-gradient(176deg,#FBFCFD 0%,#D8DCE0 26%,#8C939A 48%,#F0F3F5 64%,#A6ADB4 82%,#E4E8EB 100%);
+  --btn-primary-fill:linear-gradient(180deg,#8B3395,#5C1064);
+  --btn-metal-fill:linear-gradient(180deg,#F4F6F7,#C4C9CE 52%,#9AA1A8);
+  --shadow-primary:0 1px 0 rgba(255,255,255,.24) inset,0 10px 26px rgba(0,0,0,.34);
+  --shadow-metal:0 1px 0 rgba(255,255,255,.90) inset,0 8px 22px rgba(0,0,0,.30);
+
+  /* Hairlines. Platinum on dark grounds, Deep Plum derived for light grounds. */
+  --line:rgba(201,205,210,.16);
+  --line-strong:rgba(201,205,210,.32);
+  --line-dark:rgba(46,15,53,.12);
+  --line-dark-strong:rgba(46,15,53,.20);
+
+  /* ---- Section 5 - Typography ------------------------------- */
+  --sans:'Switzer','Tahoma','Segoe UI',Verdana,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+
+  /* ---- Section 8 - Layout And Space ------------------------- */
+  --container:1180px;
+  --container-wide:1400px;
+  --nav-h:70px;
+
+  /* ---- Legacy aliases, repointed at guide values so the shared
+     nav/footer and any not-yet-migrated rule stays correct. ---- */
+  --display:var(--sans);
+  --body:var(--sans);
+  --purple-deep:var(--plum-deep);
+  --ink:var(--plum-deep);
+  --purple-mid:var(--plum-mid);
+  --orchid:var(--amethyst);
+  --slate-plum:var(--text-dark);
+  --gray:var(--text-dark);
+  --lavender:var(--line-dark-strong);
+  --mist:var(--paper);
+  --white:#fff;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:17px;line-height:1.68;color:var(--text-dark);background:#fff;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+.wrap-wide{max-width:var(--container-wide);margin:0 auto;padding:0 20px}
+section{padding:90px 0}
+.mist{background:var(--mist)}
+
+/* -- Shared type utilities (Guide section 5) -- */
+.label{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.24em;line-height:1.4;text-transform:uppercase;color:var(--text-dark)}
+.on-dark .label{color:var(--silver-mid)}
+.section-index{font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.24em;color:var(--text-dark);display:block;margin-bottom:14px}
+.on-dark .section-index{color:var(--silver-mid)}
+.metal-text{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hairline{height:1px;border:0;background:linear-gradient(90deg,transparent,var(--line-dark-strong) 12%,var(--line-dark-strong) 88%,transparent)}
+.on-dark .hairline{background:linear-gradient(90deg,transparent,var(--line-strong) 12%,var(--line-strong) 88%,transparent)}
+
+
+/* ── Section header pattern ────────────────── */
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-head h2{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:.014em;text-transform:uppercase;color:var(--plum-deep);line-height:1.08}
+.sec-head h2 em{font-style:normal;color:var(--purple)}
+.sec-head .rule{width:40px;height:2px;background:var(--purple);margin:18px auto 0}
+.sec-head p{margin-top:22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-dark)}
+.on-dark .sec-head h2{color:#fff}
+.on-dark .sec-head h2 em{color:var(--platinum)}
+.on-dark .sec-head .rule{background:#fff}
+.on-dark .sec-head p{color:var(--silver-mid)}
+
+/* ── Buttons ───────────────────────────────── */
+.btn{display:inline-block;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:0;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-primary:hover{background:var(--purple-mid)}
+.btn-ghost{background:transparent;color:var(--slate-plum);border-color:var(--lavender)}
+.btn-ghost:hover{color:var(--purple);border-color:var(--purple)}
+.btn-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-light:hover{background:#fff;color:var(--purple)}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:var(--platinum)}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);
+     display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:54px;width:auto}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+             color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+.nav-links a:hover{color:#fff}
+.nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+.nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+.nav-cta:hover{background:#fff;color:var(--purple)!important}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* ═══════════════════════════════════════════════
+   SPEAKING HERO
+═══════════════════════════════════════════════ */
+.speak-hero{position:relative;background:var(--purple-deep);padding:calc(var(--nav-h) + 70px) 0 90px;overflow:hidden}
+.speak-hero-bg{position:absolute;inset:0;z-index:0;background:url('speaking-band-1.jpg') center 15%/cover no-repeat}
+.speak-hero-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,
+    rgba(46,15,53,.97) 0%,
+    rgba(46,15,53,.93) 40%,
+    rgba(46,15,53,.72) 62%,
+    rgba(46,15,53,.35) 85%,
+    rgba(46,15,53,.12) 100%)}
+.speak-hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.speak-hero .hero-eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-mid);margin-bottom:20px}
+.speak-hero h1{font-family:var(--sans);font-weight:700;font-size:clamp(34px,4.6vw,56px);line-height:1.06;letter-spacing:-.028em;text-transform:none;color:#fff}
+.speak-hero h1 em{font-style:normal;color:var(--orchid)}
+.speak-hero .hero-body{margin-top:20px;font-size:19px;line-height:1.62;color:rgba(233,225,234,.78);max-width:460px}
+.speak-hero .btn{margin-top:32px}
+
+/* ═══════════════════════════════════════════════
+   SPEAKING SAMPLES: video grid
+═══════════════════════════════════════════════ */
+.speak-hero-inner.solo{grid-template-columns:1fr;max-width:760px}
+.speak-hero .hero-body+.hero-body{margin-top:14px}
+.speak-hero .hero-body{max-width:560px}
+.sample-feature{max-width:900px;margin:0 auto 40px}
+.sample-pending p{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-mid)}
+.sample-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 32px}
+.sample{background:#fff;border:1px solid var(--lavender)}
+.sample-frame{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--plum-black)}
+.sample-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sample-info{padding:24px 28px 28px;border-top:1px solid var(--lavender)}
+.sample-info h3{font-family:var(--sans);font-weight:600;font-size:22px;letter-spacing:-.012em;line-height:1.24;text-transform:none;color:var(--plum-deep)}
+.sample-meta{font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--purple);margin-top:10px;line-height:1.5}
+.samples-intro{text-align:center;max-width:640px;margin:0 auto 50px;font-size:19px;line-height:1.62;color:var(--text-dark)}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{background:#330B33;padding:70px 0}
+.foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.foot-brand img{height:52px;margin-bottom:28px}
+.socials{display:flex;gap:10px;margin-bottom:30px}
+.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;
+           justify-content:center;transition:.18s}
+.socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.socials a:hover{background:#fff;border-color:#fff}
+.socials a:hover svg{fill:var(--purple)}
+.foot-meta p{font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+             color:rgba(255,255,255,.45);line-height:1.9}
+.foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.foot-meta a:hover{color:#fff;text-decoration:underline}
+.foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+
+.foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.foot-legal p{font-family:var(--sans);font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.foot-legal p:last-child{margin-bottom:0}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:980px){
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;
+             align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  .nav-toggle{display:block}
+  .foot-grid{grid-template-columns:1fr;gap:44px}
+  .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(max-width:760px){
+  .sample-grid{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:620px){
+  section{padding:64px 0}
+  .sample-info{padding:20px 22px 24px}
+  .sample-info h3{font-size:19px}
+  footer{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body data-page="speaking">
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="homepage-v4.html" class="nav-logo"><img src="ElyLogoWhiteClean2026.png" alt="Ely Delaney"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage-v4.html" data-page="home">Home</a></li>
+      <li><a href="homepage-v4.html#book">Book</a></li>
+      <li><a href="#" data-page="programs">Programs</a></li>
+      <li><a href="speaking.html" data-page="speaking">Speaking</a></li>
+      <li><a href="homepage-v4.html#projects">Projects</a></li>
+      <li><a href="homepage-v4.html#about">About</a></li>
+      <li><a href="https://followuprockstar.com/call" class="nav-cta">Book A Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ HERO ═════════════════════════════════════ -->
+<header class="speak-hero">
+  <div class="speak-hero-bg"></div>
+  <div class="speak-hero-overlay"></div>
+  <div class="wrap">
+    <div class="speak-hero-inner solo">
+      <div>
+        <p class="hero-eyebrow">Speaking Samples &nbsp;·&nbsp; Watch Ely Speak</p>
+        <h1>Welcome To Ely&rsquo;s <em>Speaking Samples</em></h1>
+        <p class="hero-body">Everyone is looking for something a little different, so here are several samples of my speaking for you to go through. Take your pick: long or short, in person or online.</p>
+        <p class="hero-body">If there&rsquo;s anything specific you&rsquo;re looking for, I&rsquo;m happy to point you in the right direction.</p>
+        <a href="https://followuprockstar.com/call" class="btn btn-white">Let&rsquo;s Talk About Your Event</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ SAMPLES ══════════════════════════════════ -->
+<section class="mist" id="samples">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Pick A <em>Sample</em></h2>
+      <div class="rule"></div>
+      <p>Nine talks &nbsp;·&nbsp; 1.5 to 56 minutes</p>
+    </div>
+    <div class="sample-feature">
+      <article class="sample sample-featured">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/f47e63a7-aa6b-4a61-a98a-01b1d06bb455?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Speaker Reel" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Speaker Reel</h3>
+          <p class="sample-meta">1.5 min &nbsp;·&nbsp; In Person Event</p>
+        </div>
+      </article>
+    </div>
+    <div class="sample-grid">
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/7dd180b8-2eed-48a6-aa34-a369624b1e49?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Impact School Of Marketing in Philadelphia" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Impact School Of Marketing in Philadelphia</h3>
+          <p class="sample-meta">56 min &nbsp;·&nbsp; In Person Presentation</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/96ec9fc1-a476-423a-8608-7817a798c974?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Connect Fest" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Connect Fest</h3>
+          <p class="sample-meta">27 min &nbsp;·&nbsp; Live Summit</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/23ed7949-3df7-43cd-8f22-9d2ea98d2d07?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Midmarket Professionals" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Midmarket Professionals</h3>
+          <p class="sample-meta">32 min &nbsp;·&nbsp; Live Group</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/475922b3-9714-4085-bb06-57f06ee6f06c?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Speakers Need To Speak" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Speakers Need To Speak</h3>
+          <p class="sample-meta">21 min &nbsp;·&nbsp; Online Summit</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/bd18dc41-3727-4130-8576-b16918bbd9b2?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Media Magic" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Media Magic</h3>
+          <p class="sample-meta">32 min &nbsp;·&nbsp; Online Summit</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/f8077328-861a-41b7-bf8a-790bc578c663?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="TAG Talks Dallas" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>TAG Talks Dallas</h3>
+          <p class="sample-meta">7 min &nbsp;·&nbsp; In Person Event</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame">
+          <iframe src="https://iframe.mediadelivery.net/embed/488253/5809c500-3138-48c2-863c-3f59a016cfda?autoplay=false&amp;loop=false&amp;muted=false&amp;preload=false&amp;responsive=true" title="Elevate Summit" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="sample-info">
+          <h3>Elevate Summit</h3>
+          <p class="sample-meta">30 min &nbsp;·&nbsp; Online Summit</p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="sample-frame sample-pending">
+          <p>Video coming soon</p><!-- TODO: swap in Babs conference video embed when Ely sends the link -->
+        </div>
+        <div class="sample-info">
+          <h3>Babs Conference</h3>
+          <p class="sample-meta">90 sec &nbsp;·&nbsp; Conference Presentation</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING CTA ══════════════════════════════ -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Want Ely At <em>Your Next Event?</em></h2>
+    <div class="rule"></div>
+    <p>Practical, story driven, immediately usable. Let&rsquo;s talk about your event.</p>
+    <a href="https://followuprockstar.com/call" class="btn btn-white">Let&rsquo;s Talk About Your Event</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+
+      <!-- Brand column -->
+      <div class="foot-brand">
+        <img src="ElyLogoWhiteClean2026.png" alt="Ely Delaney, Communications Strategist">
+
+        <div class="socials">
+          <a href="https://linkedin.com/in/elydelaney" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6zM8 18.3H5.3V9.8H8v8.5zM6.7 8.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zm12 9.7H16v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.7V9.8H13v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/elydelaney" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/elydelaney" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+
+        <div class="foot-meta">
+          <p>2007 &ndash; <span id="year">2026</span> Copyrights Purple Knight Marketing</p>
+          <p>All Rights Reserved</p>
+          <p>
+            <a href="contact.html">Contact</a>
+            <span class="sep">|</span>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span class="sep">|</span>
+            <a href="https://elydelaney.com/privacy-policy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal column -->
+      <div class="foot-legal">
+        <p>"Testimonials shown are real experiences from paying users. Their results are not typical and your experience will vary based upon your effort, education, business model, and market forces beyond our control. We make no earnings claims or return on investment claims, and you may not make your money back."</p>
+
+        <p>Purple Knight Marketing can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.</p>
+
+        <p>Nothing on this page, any of our websites, or any of our content or curriculum is a promise or guarantee of results or future earnings, and we do not offer any legal, medical, tax or other professional advice. Any financial numbers referenced here, or on any of our sites, are illustrative of concepts only and should not be considered average earnings, exact earnings, or promises for actual or future performance. Use caution and always consult your accountant, lawyer or professional advisor before acting on this or any information related to a lifestyle change or your business or finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+
+        <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Nav ─────────────────────────────────── */
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ── Nav active state, driven by body[data-page] so the nav
+   markup itself stays identical across every page ────────── */
+(function(){
+  var current = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
+    if (a.getAttribute('data-page') === current) a.classList.add('on');
+  });
+})();
+
+/* ── Copyright year, updates itself ──────── */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

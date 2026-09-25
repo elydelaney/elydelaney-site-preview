@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Ely Delaney — Resource / Toolkit pages — ONE shared stylesheet
+   Paste once: Website (or Funnel) → Settings → Custom CSS.
+   Covers all 11 pages: #nav (Global Header), .res-main (per-page body),
+   .res-footer (Global Footer). Tokens match homepage-v4 (Style Guide v1.2).
+   Every rule is scoped to #nav / .res-main / .res-footer so it can NOT
+   touch HighLevel's own builder chrome or other pages/sections.
+═══════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root{
+  --purple:#5C1064; --purple-deep:#3C1C44; --ink:#330B33; --purple-mid:#944C9C;
+  --orchid:#BC64C4; --slate-plum:#6B5464; --gray:#949C9C; --lavender:#E4DCE4;
+  --mist:#F5F2F6; --white:#fff;
+  --display:'Archivo',Tahoma,sans-serif; --body:'Inter',Tahoma,sans-serif;
+  --container:1170px; --nav-h:70px;
+}
+
+#nav *,#nav *::before,#nav *::after,
+.res-main *,.res-main *::before,.res-main *::after,
+.res-legal *,.res-legal *::before,.res-legal *::after,
+.res-footer *,.res-footer *::before,.res-footer *::after{box-sizing:border-box;margin:0;padding:0}
+
+#nav img,.res-main img,.res-legal img,.res-footer img{display:block;max-width:100%}
+
+.res-main{background:var(--mist);font-family:var(--body);font-size:15px;line-height:1.7;color:var(--slate-plum);-webkit-font-smoothing:antialiased}
+
+/* Full-bleed: break out of HighLevel's boxed row/column so the background spans
+   the whole viewport. The inner .wrap still centres content at --container width.
+   If it ever causes a sideways scrollbar, add  html,body{overflow-x:hidden}  to
+   the funnel CSS as well. */
+.res-main,.res-legal,.res-footer{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+
+#nav .wrap,.res-main .wrap,.res-legal .wrap,.res-footer .wrap{max-width:var(--container);margin:0 auto;padding:0 20px}
+.res-main section{padding:36px 0}
+.res-main .mist{background:var(--mist)}
+
+/* ── Section heads (multi-tool pages) ─────────── */
+.res-main .sec-head{margin-bottom:36px}
+.res-main .sec-head h2{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.5px;text-transform:uppercase;color:var(--ink);line-height:1.2}
+.res-main .sec-head .rule{width:34px;height:2px;background:var(--purple);margin:14px 0 0}
+
+/* ── Buttons ─────────────────────────────────── */
+.res-main .btn{display:inline-block;font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:18px 40px;border-radius:0;text-decoration:none;border:1px solid transparent;transition:.18s;cursor:pointer}
+.res-main .btn-white{background:#fff;color:var(--purple)}
+.res-main .btn-white:hover{background:var(--lavender)}
+.res-main .btn-primary{background:var(--purple);color:#fff}
+.res-main .btn-primary:hover{background:var(--purple-mid)}
+
+/* ═══════════════ NAV (Global Header) ═══════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--purple);display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12),0 6px 24px rgba(51,11,51,.25)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+#nav .nav-logo img{height:54px;width:auto}
+#nav .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+#nav .nav-links a{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding-bottom:4px}
+#nav .nav-links a:hover{color:#fff}
+#nav .nav-links a.on{color:#fff;border-bottom:2px solid #fff}
+#nav .nav-cta{border:1px solid rgba(255,255,255,.55)!important;color:#fff!important;padding:10px 18px!important;transition:.18s}
+#nav .nav-cta:hover{background:#fff;color:var(--purple)!important}
+#nav .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+
+/* ═══════════════ HERO + VIDEO (per page) ═══════════════ */
+.res-main .res-hero{background:var(--mist);padding:calc(var(--nav-h) + 40px) 0 0;text-align:center}
+.res-main .res-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.6vw,34px);line-height:1.3;letter-spacing:-.3px;color:var(--ink);max-width:760px;margin:0 auto}
+.res-main .res-hero h1 em{font-style:normal;color:var(--purple)}
+.res-main .res-hero p{margin:18px auto 0;max-width:600px;font-size:14px;line-height:1.8;color:var(--slate-plum)}
+.res-main .res-hero .disclosure{margin-top:20px;font-size:12px;color:var(--gray);max-width:560px;margin-left:auto;margin-right:auto}
+
+.res-main .res-video-wrap{background:var(--mist);padding:40px 0}
+.res-main .res-video{max-width:860px;margin:0 auto;box-shadow:0 24px 60px rgba(51,11,51,.14)}
+.res-main .res-video video{width:100%;height:auto;display:block;border:0}
+.res-main .res-note{max-width:860px;margin:16px auto 0;font-size:12.5px;line-height:1.7;color:var(--gray);font-style:italic}
+.res-main .res-cta{text-align:center;margin-top:36px}
+
+/* ── Product grid (multi-tool pages) ─────────── */
+.res-main .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.res-main .prod-card{background:#fff;border:1px solid var(--lavender);padding:26px 24px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.res-main .prod-card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.res-main .prod-card h3{font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:.3px;color:var(--ink);margin-bottom:10px;line-height:1.4}
+.res-main .prod-card p{font-size:13.5px;line-height:1.7;flex:1;margin-bottom:18px}
+.res-main .prod-card a{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--purple);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.res-main .prod-card a:hover{gap:10px}
+.res-main .prod-card a svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.4;transition:margin .2s}
+
+/* ── Feedback block ──────────────────────────── */
+.res-main .res-feedback{text-align:center;max-width:640px;margin:0 auto}
+.res-main .res-feedback p{font-family:var(--display);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);line-height:1.6;margin-bottom:22px}
+
+/* ═══════════════ FOOTER (Global Footer) ═══════════════ */
+.res-footer{background:var(--ink);padding:70px 0;font-family:var(--body)}
+.res-footer .foot-grid{display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:start}
+.res-footer .foot-brand img{height:52px;margin-bottom:28px}
+.res-footer .socials{display:flex;gap:10px;margin-bottom:30px}
+.res-footer .socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;justify-content:center;transition:.18s}
+.res-footer .socials a svg{width:19px;height:19px;fill:rgba(255,255,255,.65);transition:fill .18s}
+.res-footer .socials a:hover{background:#fff;border-color:#fff}
+.res-footer .socials a:hover svg{fill:var(--purple)}
+.res-footer .foot-meta p{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1.9}
+.res-footer .foot-meta a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .18s}
+.res-footer .foot-meta a:hover{color:#fff;text-decoration:underline}
+.res-footer .foot-meta .sep{color:rgba(255,255,255,.24);margin:0 6px}
+.res-footer .foot-legal{border-left:1px solid rgba(255,255,255,.14);padding-left:70px}
+.res-footer .foot-legal p{font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.44);margin-bottom:18px}
+.res-footer .foot-legal p:last-child{margin-bottom:0}
+
+/* ═══════════════ LEGAL / POLICY PAGES ═══════════════
+   Used by the legal-*.html snippets. Unchanged look: mist sub-nav strip,
+   deep-purple title band, white body. */
+.res-legal .legal-subnav{background:var(--mist);border-bottom:1px solid var(--lavender);margin-top:var(--nav-h)}
+.res-legal .legal-subnav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 4px}
+.res-legal .legal-subnav a{display:inline-block;padding:13px 14px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:var(--slate-plum);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap;transition:.15s}
+.res-legal .legal-subnav a:hover{color:var(--purple)}
+.res-legal .legal-subnav a.on{color:var(--purple);border-bottom-color:var(--purple)}
+
+.res-legal .legal-hero{background:var(--purple-deep);padding:50px 0 40px;text-align:center}
+.res-legal .legal-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,32px);line-height:1.25;letter-spacing:-.3px;color:#fff;max-width:760px;margin:0 auto}
+
+.res-legal .legal-body{background:#fff;padding:60px 0 100px}
+.res-legal .legal-content{max-width:760px;margin:0 auto}
+.res-legal .legal-content p{font-size:14.5px;line-height:1.85;margin-bottom:18px;color:var(--slate-plum)}
+.res-legal .legal-content h3{font-family:var(--display);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.3px;color:var(--ink);margin:32px 0 14px}
+.res-legal .legal-content h3:first-child{margin-top:0}
+.res-legal .legal-content ul{margin:0 0 18px 20px}
+.res-legal .legal-content li{font-size:14.5px;line-height:1.8;margin-bottom:8px;color:var(--slate-plum)}
+
+/* ═══════════════ RESPONSIVE ═══════════════ */
+@media(max-width:1100px){
+  .res-main .prod-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:980px){
+  #nav .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--purple);flex-direction:column;align-items:flex-start;gap:0;padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s}
+  #nav .nav-links.open{max-height:520px;padding:14px 20px 24px}
+  #nav .nav-links li{width:100%}
+  #nav .nav-links a{display:block;padding:14px 0;border-bottom:0}
+  #nav .nav-toggle{display:block}
+  .res-footer .foot-grid{grid-template-columns:1fr;gap:44px}
+  .res-footer .foot-legal{border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:44px}
+}
+@media(max-width:620px){
+  .res-main section{padding:50px 0}
+  .res-main .prod-grid{grid-template-columns:1fr}
+  .res-footer{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  #nav *,.res-main *,.res-legal *,.res-footer *{transition-duration:.01ms!important}
+}
